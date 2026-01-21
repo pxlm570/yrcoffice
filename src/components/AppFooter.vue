@@ -81,9 +81,7 @@ const currentYear = computed(() => new Date().getFullYear())
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25),
-              0 0 0 1px rgba(255, 255, 255, 0.05) inset,
-              0 1px 0 rgba(255, 255, 255, 0.1) inset;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
   padding: 2.5rem 0 1.25rem;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -109,14 +107,7 @@ const currentYear = computed(() => new Date().getFullYear())
 }
 
 .footer-inner::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  opacity: 0.6;
+  display: none;
 }
 
 .footer-container {
@@ -202,7 +193,6 @@ const currentYear = computed(() => new Date().getFullYear())
 
 .brand-logo:hover .brand-name {
   color: rgba(255, 255, 255, 1);
-  text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
 }
 
 .brand-logo-img {
@@ -216,8 +206,7 @@ const currentYear = computed(() => new Date().getFullYear())
   font-weight: 700;
   color: rgba(255, 255, 255, 0.95);
   letter-spacing: -0.02em;
-  transition: color 200ms ease, text-shadow 250ms ease;
-  text-shadow: 0 0 0 rgba(59, 130, 246, 0);
+  transition: color 200ms ease;
 }
 
 .brand-desc {
@@ -281,7 +270,7 @@ const currentYear = computed(() => new Date().getFullYear())
   left: 0;
   width: 0;
   height: 1px;
-  background: linear-gradient(90deg, #2563EB, #3B82F6, #60A5FA);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
   transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -319,7 +308,7 @@ const currentYear = computed(() => new Date().getFullYear())
   left: 0;
   width: 0;
   height: 1px;
-  background: linear-gradient(90deg, #2563EB, #3B82F6, #60A5FA);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
   transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -340,15 +329,7 @@ const currentYear = computed(() => new Date().getFullYear())
 }
 
 .footer-bottom::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #3B82F6, transparent);
-  border-radius: 2px;
+  display: none;
 }
 
 .copyright {
