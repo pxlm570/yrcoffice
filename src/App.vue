@@ -20,10 +20,10 @@ import AppFooter from './components/AppFooter.vue'
 
 const themeOverrides = {
   common: {
-    primaryColor: '#3b82f6',
-    primaryColorHover: '#2563eb',
-    primaryColorPressed: '#1d4ed8',
-    primaryColorSuppl: '#3b82f6',
+    primaryColor: '#f9fafb',
+    primaryColorHover: '#ffffff',
+    primaryColorPressed: '#e5e7eb',
+    primaryColorSuppl: '#f9fafb',
     bodyColor: '#e5e7eb',
     textColor1: '#f9fafb',
     textColor2: '#e5e7eb',
@@ -48,11 +48,11 @@ const themeOverrides = {
   --color-bg-tertiary: #1a1a24;
   --color-bg-elevated: #1e1e2a;
 
-  /* Accent Color - Tech Blue */
-  --color-accent: #3b82f6;
-  --color-accent-hover: #2563eb;
-  --color-accent-pressed: #1d4ed8;
-  --color-accent-subtle: rgba(59, 130, 246, 0.1);
+  /* Accent Color - White/Gray */
+  --color-accent: #f9fafb;
+  --color-accent-hover: #ffffff;
+  --color-accent-pressed: #e5e7eb;
+  --color-accent-subtle: rgba(255, 255, 255, 0.1);
 
   /* Text Colors */
   --color-text-primary: #f9fafb;
@@ -150,13 +150,13 @@ a:hover {
 
 /* Selection */
 ::selection {
-  background: var(--color-accent);
+  background: rgba(255, 255, 255, 0.2);
   color: white;
 }
 
 /* Focus Visible */
 :focus-visible {
-  outline: 2px solid var(--color-accent);
+  outline: 2px solid rgba(255, 255, 255, 0.3);
   outline-offset: 2px;
 }
 

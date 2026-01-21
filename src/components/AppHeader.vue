@@ -76,8 +76,8 @@ onUnmounted(() => {
 
 .header-inner {
   background: linear-gradient(135deg, rgba(10, 10, 15, 0.85) 0%, rgba(18, 18, 26, 0.8) 100%);
-  backdrop-filter: blur(30px) saturate(200%);
-  -webkit-backdrop-filter: blur(30px) saturate(200%);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);

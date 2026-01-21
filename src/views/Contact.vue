@@ -371,7 +371,7 @@ const getServiceLabel = (value) => {
     rgba(255, 255, 255, 0.1) 0%,
     rgba(255, 255, 255, 0.05) 50%,
     rgba(255, 255, 255, 0.02) 100%);
-  backdrop-filter: blur(32px) saturate(180%);
+  backdrop-filter: blur(32px);
   border: none;
   border-radius: 20px;
   padding: 44px;

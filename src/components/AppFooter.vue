@@ -77,8 +77,8 @@ const currentYear = computed(() => new Date().getFullYear())
 
 .footer-inner {
   background: linear-gradient(135deg, rgba(10, 10, 15, 0.75) 0%, rgba(18, 18, 26, 0.7) 100%);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
