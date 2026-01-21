@@ -82,8 +82,7 @@ onUnmounted(() => {
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
               0 0 0 1px rgba(255, 255, 255, 0.08) inset,
-              0 1px 0 rgba(255, 255, 255, 0.15) inset,
-              0 0 40px rgba(59, 130, 246, 0.1);
+              0 1px 0 rgba(255, 255, 255, 0.15) inset;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -117,8 +116,7 @@ onUnmounted(() => {
   border-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4),
               0 0 0 1px rgba(255, 255, 255, 0.12) inset,
-              0 1px 0 rgba(255, 255, 255, 0.2) inset,
-              0 0 40px rgba(59, 130, 246, 0.15);
+              0 1px 0 rgba(255, 255, 255, 0.2) inset;
 }
 
 .header-container {
