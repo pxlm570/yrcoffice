@@ -80,9 +80,7 @@ onUnmounted(() => {
   -webkit-backdrop-filter: blur(30px) saturate(200%);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
-              0 0 0 1px rgba(255, 255, 255, 0.08) inset,
-              0 1px 0 rgba(255, 255, 255, 0.15) inset;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -101,22 +99,13 @@ onUnmounted(() => {
 }
 
 .header-inner::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  opacity: 0.6;
+  display: none;
 }
 
 .header.is-scrolled .header-inner {
   background: linear-gradient(135deg, rgba(10, 10, 15, 0.95) 0%, rgba(18, 18, 26, 0.92) 100%);
   border-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4),
-              0 0 0 1px rgba(255, 255, 255, 0.12) inset,
-              0 1px 0 rgba(255, 255, 255, 0.2) inset;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
 .header-container {
@@ -225,7 +214,6 @@ onUnmounted(() => {
 /* Logo hover effect */
 .logo:hover .logo-text {
   color: rgba(255, 255, 255, 1);
-  text-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
 }
 
 .logo:hover .logo-icon {
@@ -233,11 +221,11 @@ onUnmounted(() => {
 }
 
 .logo-icon {
-  filter: drop-shadow(0 0 0 rgba(59, 130, 246, 0));
+  filter: none;
 }
 
 .logo:hover .logo-icon {
-  filter: drop-shadow(0 4px 12px rgba(59, 130, 246, 0.4));
+  filter: none;
 }
 
 /* Navigation */
@@ -282,7 +270,7 @@ onUnmounted(() => {
   left: 50%;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #2563EB, #3B82F6, #60A5FA);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
   transform: translateX(-50%);
   transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 2px;
@@ -313,30 +301,28 @@ onUnmounted(() => {
   font-size: 0.9375rem;
   font-weight: 600;
   color: #ffffff;
-  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
-  border: 1px solid rgba(59, 130, 246, 0.4);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.12) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 10px;
   text-decoration: none;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   white-space: nowrap;
-  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3),
-              0 0 0 1px rgba(59, 130, 246, 0.1) inset;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   position: relative;
   overflow: hidden;
   cursor: pointer;
 }
 
 .cta-button:hover {
-  background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%);
-  border-color: rgba(96, 165, 250, 0.5);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 100%);
+  border-color: rgba(255, 255, 255, 0.4);
   transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.45),
-              0 0 0 1px rgba(96, 165, 250, 0.15) inset;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 .cta-button:active {
   transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.35);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
 .cta-button::before {
