@@ -392,9 +392,9 @@ const getServiceLabel = (value) => {
   height: 2px;
   background: linear-gradient(90deg,
     transparent,
-    rgba(255, 255, 255, 0.4),
-    rgba(59, 130, 246, 0.3),
-    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.3),
     transparent);
   opacity: 0.8;
 }
@@ -428,8 +428,8 @@ const getServiceLabel = (value) => {
   height: 3px;
   background: linear-gradient(90deg,
     transparent,
-    #3B82F6,
-    #60A5FA,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.3),
     transparent);
   background-size: 200% 100%;
   border-radius: 2px;
@@ -476,7 +476,8 @@ const getServiceLabel = (value) => {
   width: 52px;
   height: 52px;
   border-radius: 14px;
-  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -535,7 +536,8 @@ const getServiceLabel = (value) => {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -549,6 +551,8 @@ const getServiceLabel = (value) => {
   transform: scale(1.15);
   box-shadow:
     0 8px 20px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
 }
 
 /* Right Card - Form */
@@ -601,8 +605,8 @@ const getServiceLabel = (value) => {
 }
 
 .contact-form-card :deep(.n-button--primary) {
-  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 50%, #1D4ED8 100%);
-  border: none;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.12) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow:
     0 4px 16px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
@@ -613,11 +617,12 @@ const getServiceLabel = (value) => {
 }
 
 .contact-form-card :deep(.n-button--primary:hover) {
-  background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 50%, #2563EB 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 100%);
   transform: translateY(-3px);
   box-shadow:
     0 8px 24px rgba(0, 0, 0, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .contact-form-card :deep(.n-button--primary:active) {
