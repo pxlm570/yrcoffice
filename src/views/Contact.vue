@@ -367,19 +367,15 @@ const getServiceLabel = (value) => {
 
 /* Card Styles */
 .card {
-  background: linear-gradient(135deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0.05) 50%,
-    rgba(255, 255, 255, 0.02) 100%);
-  backdrop-filter: blur(32px);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: none;
   border: none;
   border-radius: 20px;
   padding: 44px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
 }
 
 .card::before {
@@ -542,7 +538,7 @@ const getServiceLabel = (value) => {
 .contact-form-card :deep(.n-input__wrapper),
 .contact-form-card :deep(.n-base-selection) {
   background: rgba(255, 255, 255, 0.06) !important;
-  backdrop-filter: blur(10px);
+  backdrop-filter: none;
   border: 1px solid rgba(255, 255, 255, 0.12) !important;
   transition: all 0.3s ease;
 }

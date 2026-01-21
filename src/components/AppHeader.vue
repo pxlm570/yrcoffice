@@ -75,10 +75,9 @@ onUnmounted(() => {
 }
 
 .header-inner {
-  background: linear-gradient(135deg, rgba(10, 10, 15, 0.85) 0%, rgba(18, 18, 26, 0.8) 100%);
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(10, 10, 15, 0.95);
+  backdrop-filter: none;
+  border: none;
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -103,8 +102,7 @@ onUnmounted(() => {
 }
 
 .header.is-scrolled .header-inner {
-  background: linear-gradient(135deg, rgba(10, 10, 15, 0.95) 0%, rgba(18, 18, 26, 0.92) 100%);
-  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(10, 10, 15, 0.98);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
