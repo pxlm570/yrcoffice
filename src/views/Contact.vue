@@ -481,7 +481,7 @@ const getServiceLabel = (value) => {
 }
 
 .contact-link:hover {
-  color: #60A5FA;
+  color: rgba(255, 255, 255, 1);
 }
 
 /* Social Section */
