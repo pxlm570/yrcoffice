@@ -372,39 +372,24 @@ const getServiceLabel = (value) => {
     rgba(255, 255, 255, 0.05) 50%,
     rgba(255, 255, 255, 0.02) 100%);
   backdrop-filter: blur(32px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: none;
   border-radius: 20px;
   padding: 44px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
   box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    0 8px 32px rgba(0, 0, 0, 0.25);
 }
 
 .card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg,
-    transparent,
-    rgba(255, 255, 255, 0.3),
-    rgba(255, 255, 255, 0.5),
-    rgba(255, 255, 255, 0.3),
-    transparent);
-  opacity: 0.8;
+  display: none;
 }
 
 .card:hover {
   transform: translateY(-6px);
   box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.25);
+    0 20px 50px rgba(0, 0, 0, 0.3);
 }
 
 /* Card Title */
@@ -414,26 +399,12 @@ const getServiceLabel = (value) => {
   font-weight: 700;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: none;
   position: relative;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
 .card-title::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 60px;
-  height: 3px;
-  background: linear-gradient(90deg,
-    transparent,
-    rgba(255, 255, 255, 0.5),
-    rgba(255, 255, 255, 0.3),
-    transparent);
-  background-size: 200% 100%;
-  border-radius: 2px;
-  animation: shimmer 3s ease-in-out infinite;
+  display: none;
 }
 
 @keyframes shimmer {
