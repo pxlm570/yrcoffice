@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tree:*)",
+      "Bash(npm install)",
+      "Bash(npm run dev)",
+      "Bash(dir:*)",
+      "Bash(start http://localhost:5173/)",
+      "Skill(superpowers:brainstorming)",
+      "Bash(echo:*)",
+      "Bash(start http://localhost:5173)",
+      "Skill(superpowers:executing-plans)",
+      "Bash(start http://localhost:5173/contact)",
+      "Bash(timeout:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(del:*)",
+      "Bash(rd /S /Q NUL)"
+    ]
+  }
+}
