@@ -69,6 +69,18 @@
             <p class="service-desc">{{ service.description }}</p>
           </div>
         </div>
+
+        <!-- Stats within Services Section -->
+        <div class="services-stats">
+          <div
+            v-for="stat in stats"
+            :key="stat.label"
+            class="service-stat-item"
+          >
+            <div class="stat-value">{{ stat.value }}</div>
+            <div class="stat-label">{{ stat.label }}</div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -212,22 +224,6 @@
                 </li>
               </ul>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="section stats">
-      <div class="container">
-        <div class="stats-grid">
-          <div
-            v-for="stat in stats"
-            :key="stat.label"
-            class="stat-item"
-          >
-            <div class="stat-value">{{ stat.value }}</div>
-            <div class="stat-label">{{ stat.label }}</div>
           </div>
         </div>
       </div>
@@ -838,6 +834,56 @@ onMounted(() => {
   line-height: 1.65;
 }
 
+/* Services Stats */
+.services-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .services-stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.service-stat-item {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-stat-item:hover {
+  border-color: rgba(59, 130, 246, 0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(59, 130, 246, 0.12);
+}
+
+.service-stat-item .stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--color-accent) 0%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.service-stat-item .stat-label {
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 500;
+}
+
 /* Solutions Section */
 .solutions-list {
   display: flex;
@@ -922,57 +968,6 @@ onMounted(() => {
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.12);
   color: rgba(255, 255, 255, 0.7);
-}
-
-/* Stats Section */
-.stats {
-  position: relative;
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-
-@media (max-width: 768px) {
-  .stats-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-}
-
-.stat-item {
-  text-align: center;
-  padding: 2.5rem 2rem;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 14px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.stat-item:hover {
-  border-color: rgba(59, 130, 246, 0.3);
-  transform: translateY(-4px);
-  box-shadow: 0 16px 32px rgba(59, 130, 246, 0.15);
-}
-
-.stat-value {
-  font-size: 3rem;
-  font-weight: 700;
-  background: linear-gradient(135deg, var(--color-accent) 0%, #60a5fa 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  line-height: 1;
-  margin-bottom: 0.6rem;
-}
-
-.stat-label {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.55);
-  font-weight: 500;
 }
 
 /* CTA Section */
