@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28">
+  <!-- Large bubble (left) - drawn first, behind -->
+  <g fill="#ffffff">
+    <!-- Left bubble body -->
+    <path d="M10,3c-4.42,0-8,3.13-8,7c0,2.14,1.16,4.04,3,5.28l-0.45,1.6l1.9-0.95
+      C7.48,15.96,8.72,16.1,10,16.1c0.08,0,0.15,0,0.23,0c4.42,0,8-3.13,8-7
+      S14.42,3,10,3z"/>
+    <!-- Left bubble eyes -->
+    <circle cx="6.5" cy="9.5" r="1.2"/>
+    <circle cx="13.5" cy="9.5" r="1.2"/>
+  </g>
+
+  <!-- Small bubble (right) - drawn second, on top, overlapping -->
+  <g fill="#ffffff">
+    <!-- Right bubble body - positioned to overlap with left bubble -->
+    <path d="M21,9c-3.87,0-7,2.69-7,6c0,1.7,0.91,3.21,2.33,4.19l-0.33,1.3
+      l1.67-0.82c0.76,0.21,1.57,0.33,2.41,0.33c0.08,0,0.15,0,0.23,0c3.87,0,7-2.69,7-6
+      S24.87,9,21,9z"/>
+    <!-- Right bubble eyes -->
+    <circle cx="17.5" cy="13.5" r="1.05"/>
+    <circle cx="24.5" cy="13.5" r="1.05"/>
+  </g>
+</svg>
