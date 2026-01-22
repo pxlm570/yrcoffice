@@ -12,9 +12,9 @@
             专注高校管理、企业管理及教育行业数字化产品开发
           </p>
           <div class="hero-actions">
-            <a href="mailto:contact@micono.eu.org" class="button-primary">
+            <router-link to="/contact" class="button-primary">
               开始合作
-            </a>
+            </router-link>
             <router-link to="/services" class="button-secondary">
               了解服务
             </router-link>
@@ -239,9 +239,9 @@
         <div class="cta-content">
           <h2 class="cta-title">准备好开始您的项目了吗？</h2>
           <p class="cta-desc">告诉我们您的需求，我们提供专业的技术咨询和方案设计</p>
-          <a href="mailto:contact@micono.eu.org" class="cta-button">
+          <router-link to="/contact" class="cta-button">
             联系咨询
-          </a>
+          </router-link>
         </div>
       </div>
     </section>
