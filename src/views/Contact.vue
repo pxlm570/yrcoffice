@@ -221,7 +221,6 @@ const rules = {
   },
   service: {
     required: true,
-    type: 'number',
     message: '请选择服务类型',
     trigger: 'change'
   },
@@ -359,7 +358,7 @@ const getServiceLabel = (value) => {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 3fr 7fr;
+  grid-template-columns: 2fr 8fr;
   gap: 48px;
   animation: fadeInUp 0.8s ease-out 0.4s backwards;
   position: relative;
@@ -603,7 +602,7 @@ const getServiceLabel = (value) => {
   }
 
   .contact-grid {
-    grid-template-columns: 4fr 6fr;
+    grid-template-columns: 3fr 7fr;
     gap: 32px;
   }
 
