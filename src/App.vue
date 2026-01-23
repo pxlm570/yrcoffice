@@ -63,16 +63,30 @@ const themeOverrides = {
   /* Border Colors */
   --color-border-subtle: rgba(255, 255, 255, 0.06);
   --color-border-default: rgba(255, 255, 255, 0.1);
+  --color-border-strong: rgba(255, 255, 255, 0.15);
+
+  /* Gradients */
+  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.04) 100%);
+  --gradient-accent: linear-gradient(135deg, #3B82F6 0%, #2563EB 50%, #1D4ED8 100%);
+  --gradient-white: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(200,200,220,0.85) 100%);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.2);
+  --shadow-glow: 0 0 40px rgba(59, 130, 246, 0.15);
 
   /* Spacing */
-  --spacing-xs: 4px;
-  --spacing-sm: 8px;
-  --spacing-md: 16px;
-  --spacing-lg: 24px;
-  --spacing-xl: 32px;
-  --spacing-2xl: 48px;
-  --spacing-3xl: 64px;
-  --spacing-4xl: 96px;
+  --space-3xs: 2px;
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
 
   /* Border Radius */
   --radius-sm: 6px;
@@ -83,8 +97,9 @@ const themeOverrides = {
 
   /* Transitions */
   --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-slow: 400ms cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 html {
@@ -164,23 +179,23 @@ a:hover {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 var(--spacing-lg);
+  padding: 0 var(--space-lg);
 }
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 var(--spacing-md);
+    padding: 0 var(--space-md);
   }
 }
 
 /* Section */
 .section {
-  padding: var(--spacing-4xl) 0;
+  padding: var(--space-4xl) 0;
 }
 
 @media (max-width: 768px) {
   .section {
-    padding: var(--spacing-3xl) 0;
+    padding: var(--space-3xl) 0;
   }
 }
 
