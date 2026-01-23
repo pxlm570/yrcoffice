@@ -244,9 +244,11 @@ const currentTab = computed(() => tabs[activeTab.value])
   transform: translateX(-50%);
   width: 800px;
   height: 800px;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, transparent 70%);
+  background: radial-gradient(circle,
+    rgba(59, 130, 246, 0.15) 0%,
+    transparent 70%);
   filter: blur(100px);
-  animation: pulse 8s ease-in-out infinite;
+  animation: pulse 10s ease-in-out infinite;
 }
 
 @keyframes pulse {
@@ -306,10 +308,13 @@ const currentTab = computed(() => tabs[activeTab.value])
   gap: 0.5rem;
   margin-bottom: 3rem;
   padding: 0.5rem;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
-  backdrop-filter: blur(10px);
 }
 
 @media (max-width: 640px) {
@@ -328,7 +333,7 @@ const currentTab = computed(() => tabs[activeTab.value])
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
   white-space: nowrap;
   position: relative;
 }
@@ -340,9 +345,13 @@ const currentTab = computed(() => tabs[activeTab.value])
 
 .tab-item.is-active {
   color: rgba(255, 255, 255, 0.95);
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(37, 99, 235, 0.1) 100%);
-  border: 1px solid rgba(59, 130, 246, 0.3);
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+  background: linear-gradient(135deg,
+    rgba(59, 130, 246, 0.25) 0%,
+    rgba(37, 99, 235, 0.15) 100%);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  box-shadow:
+    0 4px 16px rgba(59, 130, 246, 0.25),
+    0 0 0 1px rgba(59, 130, 246, 0.1) inset;
 }
 
 /* Tab Content */
@@ -421,14 +430,18 @@ const currentTab = computed(() => tabs[activeTab.value])
 }
 
 .service-item-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.02) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 14px;
   padding: 1.75rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .service-item-card::before {
@@ -438,16 +451,20 @@ const currentTab = computed(() => tabs[activeTab.value])
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.5), transparent);
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(59, 130, 246, 0.6),
+    transparent);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.4s ease;
 }
 
 .service-item-card:hover {
   border-color: rgba(59, 130, 246, 0.4);
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25),
-              0 0 20px rgba(59, 130, 246, 0.1);
+  transform: translateY(-6px);
+  box-shadow:
+    0 24px 48px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(59, 130, 246, 0.15);
 }
 
 .service-item-card:hover::before {
