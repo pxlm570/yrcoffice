@@ -428,7 +428,7 @@ onMounted(() => {
 .hero-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 var(--spacing-lg);
+  padding: 0 var(--space-lg);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
@@ -440,7 +440,7 @@ onMounted(() => {
 .hero-content {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xl);
+  gap: var(--space-xl);
 }
 
 @media (max-width: 1024px) {
@@ -456,7 +456,7 @@ onMounted(() => {
 
 @media (max-width: 768px) {
   .hero-container {
-    padding: 0 var(--spacing-md);
+    padding: 0 var(--space-md);
   }
 
   .hero-visual {
@@ -467,13 +467,13 @@ onMounted(() => {
 .hero-content {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xl);
+  gap: var(--space-xl);
 }
 
 .hero-title {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xs);
+  gap: var(--space-xs);
 }
 
 .title-line {
@@ -511,7 +511,7 @@ onMounted(() => {
 
 .hero-actions {
   display: flex;
-  gap: var(--spacing-md);
+  gap: var(--space-md);
   animation: fadeInUp 0.8s ease-out 0.6s backwards;
 }
 
@@ -520,7 +520,7 @@ onMounted(() => {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: var(--spacing-md) var(--spacing-xl);
+  padding: var(--space-md) var(--space-xl);
   font-size: 1rem;
   font-weight: 600;
   border-radius: 10px;
@@ -1158,7 +1158,7 @@ onMounted(() => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--space-md);
 }
 
 .tech-title {
@@ -1183,7 +1183,7 @@ onMounted(() => {
 
 .tech-desc {
   color: var(--color-text-secondary);
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--space-md);
   line-height: 1.6;
 }
 
@@ -1363,7 +1363,7 @@ onMounted(() => {
   }
 
   .data-card {
-    padding: var(--spacing-md);
+    padding: var(--space-md);
   }
 
   .data-icon {
@@ -1381,11 +1381,11 @@ onMounted(() => {
   }
 
   .tech-card {
-    padding: var(--spacing-lg);
+    padding: var(--space-lg);
   }
 
   .modal-content {
-    padding: var(--spacing-xl);
+    padding: var(--space-xl);
   }
 
   .modal-title {

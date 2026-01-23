@@ -163,7 +163,7 @@ const currentYear = computed(() => new Date().getFullYear())
 @media (max-width: 640px) {
   .footer-main {
     grid-template-columns: 1fr;
-    gap: var(--spacing-2xl);
+    gap: var(--space-2xl);
   }
 
   .footer-contact {
@@ -175,13 +175,13 @@ const currentYear = computed(() => new Date().getFullYear())
 .footer-brand {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
+  gap: var(--space-md);
 }
 
 .brand-logo {
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
+  gap: var(--space-sm);
   text-decoration: none;
   transition: all 0.25s ease;
 }
@@ -218,20 +218,20 @@ const currentYear = computed(() => new Date().getFullYear())
 /* Links Section */
 .footer-links {
   display: flex;
-  gap: var(--spacing-3xl);
+  gap: var(--space-3xl);
 }
 
 @media (max-width: 640px) {
   .footer-links {
     flex-direction: column;
-    gap: var(--spacing-xl);
+    gap: var(--space-xl);
   }
 }
 
 .links-column {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
+  gap: var(--space-md);
 }
 
 .links-title {
@@ -249,7 +249,7 @@ const currentYear = computed(() => new Date().getFullYear())
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-sm);
+  gap: var(--space-sm);
 }
 
 .links-list li,
@@ -286,7 +286,7 @@ const currentYear = computed(() => new Date().getFullYear())
 .footer-contact {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
+  gap: var(--space-md);
 }
 
 .contact-link {
@@ -322,7 +322,7 @@ const currentYear = computed(() => new Date().getFullYear())
 
 /* Footer Bottom */
 .footer-bottom {
-  padding-top: var(--spacing-xl);
+  padding-top: var(--space-xl);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
 }
