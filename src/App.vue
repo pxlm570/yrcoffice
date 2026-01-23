@@ -4,7 +4,11 @@
       <div class="app-container">
         <AppHeader />
         <main class="main-content">
-          <router-view />
+          <router-view v-slot="{ Component }">
+            <transition name="page-fade" mode="out-in">
+              <component :is="Component" />
+            </transition>
+          </router-view>
         </main>
         <AppFooter />
       </div>
@@ -293,5 +297,21 @@ a:hover {
 
 .main-content {
   flex: 1;
+}
+
+/* 页面过渡动画 */
+.page-fade-enter-active,
+.page-fade-leave-active {
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.page-fade-enter-from {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-20px);
 }
 </style>
