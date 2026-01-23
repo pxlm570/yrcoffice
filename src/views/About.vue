@@ -118,12 +118,14 @@ const logoUrl = 'https://cdn.micono.eu.org/icon/logo.png'
 }
 
 .page-hero {
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(37, 99, 235, 0.1) 50%, rgba(96, 165, 250, 0.08) 100%);
+  background: linear-gradient(135deg,
+    rgba(59, 130, 246, 0.18) 0%,
+    rgba(37, 99, 235, 0.12) 50%,
+    rgba(96, 165, 250, 0.08) 100%);
   background-size: 200% 200%;
-  animation: gradientShift 20s ease infinite;
+  animation: gradientShift 30s ease infinite;
   padding: 100px 20px 80px;
   text-align: center;
-  color: white;
   position: relative;
   overflow: hidden;
 }
@@ -133,18 +135,30 @@ const logoUrl = 'https://cdn.micono.eu.org/icon/logo.png'
   50% { background-position: 100% 50%; }
 }
 
+/* 添加装饰性光晕 */
 .page-hero::before {
-  display: none;
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle,
+    rgba(59, 130, 246, 0.15) 0%,
+    transparent 70%);
+  filter: blur(80px);
+  animation: pulse 10s ease-in-out infinite;
 }
 
 @keyframes pulse {
   0%, 100% {
     opacity: 1;
-    transform: scale(1);
+    transform: translateX(-50%) scale(1);
   }
   50% {
     opacity: 0.7;
-    transform: scale(1.1);
+    transform: translateX(-50%) scale(1.1);
   }
 }
 
@@ -289,12 +303,16 @@ const logoUrl = 'https://cdn.micono.eu.org/icon/logo.png'
 .value-card {
   height: 100%;
   border-radius: 16px;
-  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
-  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.02) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   overflow: hidden;
   position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .value-card::before {
@@ -303,17 +321,19 @@ const logoUrl = 'https://cdn.micono.eu.org/icon/logo.png'
   top: 0;
   left: 0;
   right: 0;
-  height: 2px;
+  height: 3px;
   background: inherit;
   transform: scaleX(0);
-  transition: transform 0.35s ease;
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .value-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3),
-              0 0 20px rgba(59, 130, 246, 0.15);
-  border-color: rgba(59, 130, 246, 0.3);
+  transform: translateY(-10px);
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.35),
+    0 0 40px rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.4);
 }
 
 .value-card:hover::before {
@@ -328,12 +348,17 @@ const logoUrl = 'https://cdn.micono.eu.org/icon/logo.png'
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.25rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .value-card:hover .value-icon {
-  transform: scale(1.1) rotate(-5deg);
+  transform: scale(1.15) rotate(-8deg);
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.15) inset;
 }
 
 .value-card h3 {
