@@ -362,25 +362,40 @@ const getServiceLabel = (value) => {
 
 /* Card Styles */
 .card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: none;
-  border: none;
+  background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.02) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   padding: 44px;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
 }
 
 .card::before {
-  display: none;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent);
+  opacity: 0.5;
 }
 
 .card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
   box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.3);
+    0 24px 60px rgba(0, 0, 0, 0.35),
+    0 0 60px rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.2);
 }
 
 /* Card Title */
@@ -421,37 +436,47 @@ const getServiceLabel = (value) => {
   gap: 16px;
   margin-bottom: 24px;
   padding: 18px;
-  background: rgba(255, 255, 255, 0.04);
+  background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(255, 255, 255, 0.02) 100%);
   border-radius: 14px;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid transparent;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .contact-item:hover {
-  background: rgba(255, 255, 255, 0.08);
-  transform: translateX(6px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  border-color: rgba(255, 255, 255, 0.15);
+  background: linear-gradient(135deg,
+    rgba(59, 130, 246, 0.12) 0%,
+    rgba(37, 99, 235, 0.06) 100%);
+  transform: translateX(8px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.15);
+  border-color: rgba(59, 130, 246, 0.25);
 }
 
 .contact-icon {
   width: 52px;
   height: 52px;
   border-radius: 14px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
+  background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.08) 100%);
   border: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   box-shadow:
-    0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
+    0 4px 16px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .contact-item:hover .contact-icon {
-  box-shadow:
-    0 6px 16px rgba(0, 0, 0, 0.4);
+  transform: scale(1.1);
+  background: linear-gradient(135deg,
+    rgba(59, 130, 246, 0.25) 0%,
+    rgba(37, 99, 235, 0.15) 100%);
+  border-color: rgba(59, 130, 246, 0.4);
 }
 
 .contact-details h3 {
@@ -527,15 +552,16 @@ const getServiceLabel = (value) => {
 .contact-form-card :deep(.n-input),
 .contact-form-card :deep(.n-select) {
   border-radius: 12px;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .contact-form-card :deep(.n-input__wrapper),
 .contact-form-card :deep(.n-base-selection) {
   background: rgba(255, 255, 255, 0.06) !important;
-  backdrop-filter: none;
+  backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.12) !important;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form-card :deep(.n-input__input-el),
@@ -553,35 +579,64 @@ const getServiceLabel = (value) => {
 .contact-form-card :deep(.n-input:hover .n-input__wrapper),
 .contact-form-card :deep(.n-base-selection:hover) {
   background: rgba(255, 255, 255, 0.08) !important;
-  border-color: rgba(255, 255, 255, 0.2) !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-color: rgba(59, 130, 246, 0.3) !important;
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.15),
+    0 0 20px rgba(59, 130, 246, 0.1);
 }
 
 .contact-form-card :deep(.n-input:focus-within .n-input__wrapper),
 .contact-form-card :deep(.n-base-selection--focus .n-base-selection__border) {
-  border-color: rgba(255, 255, 255, 0.3) !important;
+  border-color: rgba(59, 130, 246, 0.5) !important;
   box-shadow:
-    0 0 0 3px rgba(255, 255, 255, 0.1),
-    0 4px 12px rgba(0, 0, 0, 0.2);
+    0 0 0 3px rgba(59, 130, 246, 0.15),
+    0 4px 16px rgba(59, 130, 246, 0.2);
 }
 
 .contact-form-card :deep(.n-button--primary) {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.12) 100%);
+  background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(220, 220, 240, 0.85) 100%);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--color-bg-primary);
   box-shadow:
-    0 4px 16px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    0 6px 20px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
   font-size: 1rem;
   font-weight: 600;
   height: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-form-card :deep(.n-button--primary::before) {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent);
+  transition: left 0.5s ease;
 }
 
 .contact-form-card :deep(.n-button--primary:hover) {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 100%);
+  background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(230, 230, 250, 0.9) 100%);
   transform: translateY(-3px);
   box-shadow:
-    0 8px 24px rgba(0, 0, 0, 0.4);
-  border-color: rgba(255, 255, 255, 0.4);
+    0 10px 30px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-form-card :deep(.n-button--primary:hover::before) {
+  left: 100%;
 }
 
 .contact-form-card :deep(.n-button--primary:active) {
