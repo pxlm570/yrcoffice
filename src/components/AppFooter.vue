@@ -76,16 +76,35 @@ const currentYear = computed(() => new Date().getFullYear())
 }
 
 .footer-inner {
-  background: rgba(10, 10, 15, 0.9);
-  backdrop-filter: none;
-  border: none;
+  background: linear-gradient(135deg,
+    rgba(10, 10, 15, 0.95) 0%,
+    rgba(18, 18, 26, 0.9) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
   padding: 2.5rem 0 1.25rem;
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   position: relative;
   overflow: hidden;
   animation: slideUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* 添加顶部装饰线 */
+.footer-inner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15%;
+  right: 15%;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(59, 130, 246, 0.3),
+    transparent);
 }
 
 @media (min-width: 640px) {
@@ -105,9 +124,6 @@ const currentYear = computed(() => new Date().getFullYear())
   }
 }
 
-.footer-inner::before {
-  display: none;
-}
 
 .footer-container {
   max-width: 64rem;
@@ -269,13 +285,16 @@ const currentYear = computed(() => new Date().getFullYear())
   left: 0;
   width: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-  transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(90deg,
+    rgba(59, 130, 246, 0.6),
+    rgba(96, 165, 250, 0.6));
+  transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
 }
 
 .links-list a:hover {
   color: rgba(255, 255, 255, 0.95);
-  transform: translateX(4px);
+  transform: translateX(6px);
 }
 
 .links-list a:hover::after {
@@ -307,13 +326,16 @@ const currentYear = computed(() => new Date().getFullYear())
   left: 0;
   width: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-  transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(90deg,
+    rgba(59, 130, 246, 0.6),
+    rgba(96, 165, 250, 0.6));
+  transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
 }
 
 .contact-link:hover {
   color: rgba(255, 255, 255, 0.95);
-  transform: translateX(4px);
+  transform: translateX(6px);
 }
 
 .contact-link:hover::after {
