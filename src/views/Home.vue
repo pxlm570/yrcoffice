@@ -1,5 +1,12 @@
 <template>
   <div class="home">
+    <!-- Background Decoration -->
+    <div class="bg-decoration">
+      <div class="bg-glow bg-glow--primary"></div>
+      <div class="bg-glow bg-glow--secondary"></div>
+      <div class="grid-bg"></div>
+    </div>
+
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-container">
@@ -395,6 +402,22 @@ onMounted(() => {
 /* Hero Section */
 .home {
   background: linear-gradient(180deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 添加微妙的背景渐变 */
+.home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at top right,
+    rgba(59, 130, 246, 0.08) 0%,
+    transparent 50%);
+  pointer-events: none;
 }
 
 .hero {
@@ -762,15 +785,18 @@ onMounted(() => {
 }
 
 .service-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.03) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 14px;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   position: relative;
   overflow: hidden;
 }
@@ -781,17 +807,21 @@ onMounted(() => {
   top: 0;
   left: 0;
   right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(59, 130, 246, 0.6),
+    transparent);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.4s ease;
 }
 
 .service-card:hover {
   border-color: rgba(59, 130, 246, 0.4);
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3),
-              0 0 20px rgba(59, 130, 246, 0.1);
+  transform: translateY(-8px);
+  box-shadow:
+    0 24px 48px rgba(0, 0, 0, 0.3),
+    0 0 60px rgba(59, 130, 246, 0.15);
 }
 
 .service-card:hover::before {
@@ -813,8 +843,10 @@ onMounted(() => {
 
 .service-card:hover .service-icon {
   transform: scale(1.1) rotate(-5deg);
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.3) 0%, rgba(37, 99, 235, 0.2) 100%);
-  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+  background: linear-gradient(135deg,
+    rgba(59, 130, 246, 0.3) 0%,
+    rgba(37, 99, 235, 0.2) 100%);
+  box-shadow: 0 12px 28px rgba(59, 130, 246, 0.35);
 }
 
 .service-icon svg {
@@ -976,22 +1008,47 @@ onMounted(() => {
   max-width: 640px;
   margin: 0 auto;
   padding: 4rem 3rem;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(37, 99, 235, 0.08) 100%);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(59, 130, 246, 0.2);
+  background: linear-gradient(135deg,
+    rgba(59, 130, 246, 0.2) 0%,
+    rgba(37, 99, 235, 0.1) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(59, 130, 246, 0.25);
   border-radius: 16px;
   position: relative;
   overflow: hidden;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.2),
+    0 0 60px rgba(59, 130, 246, 0.1);
 }
 
+/* 添加顶部光效 */
 .cta-content::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.5), transparent);
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(96, 165, 250, 0.8),
+    transparent);
+}
+
+/* 添加内部光晕 */
+.cta-content::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle,
+    rgba(59, 130, 246, 0.25) 0%,
+    transparent 70%);
+  filter: blur(60px);
+  animation: floatSlow 15s ease-in-out infinite;
 }
 
 .cta-title {
@@ -1390,6 +1447,95 @@ onMounted(() => {
 
   .modal-title {
     font-size: 1.25rem;
+  }
+}
+
+/* Background Decoration Styles */
+.bg-decoration {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.bg-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  animation: floatSlow 20s ease-in-out infinite;
+}
+
+.bg-glow--primary {
+  top: -10%;
+  right: -5%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle,
+    rgba(59, 130, 246, 0.3) 0%,
+    transparent 70%);
+  animation-delay: 0s;
+}
+
+.bg-glow--secondary {
+  bottom: -10%;
+  left: -5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle,
+    rgba(139, 92, 246, 0.25) 0%,
+    transparent 70%);
+  animation-delay: -10s;
+}
+
+.grid-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  mask-image: radial-gradient(ellipse at center, black 0%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 0%, transparent 70%);
+  opacity: 0.5;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.05);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
