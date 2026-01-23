@@ -84,7 +84,7 @@
               </n-thing>
             </n-list-item>
             <n-list-item>
-              <n-thing title专业的技术团队">
+              <n-thing title="专业的技术团队">
                 <template #description>团队成员经验丰富，技术实力扎实，能够应对各种复杂需求</template>
               </n-thing>
             </n-list-item>
@@ -258,9 +258,10 @@ const logoUrl = 'https://cdn.micono.eu.org/icon/logo.png'
   box-shadow:
     0 25px 50px rgba(59, 130, 246, 0.15),
     0 0 0 1px rgba(59, 130, 246, 0.1) inset;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all var(--transition-slow);
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 35px;
   object-fit: contain;
