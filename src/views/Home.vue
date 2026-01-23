@@ -415,7 +415,7 @@ onMounted(() => {
   right: 0;
   bottom: 0;
   background: radial-gradient(ellipse at top right,
-    rgba(59, 130, 246, 0.08) 0%,
+    var(--color-blue-subtle) 0%,
     transparent 50%);
   pointer-events: none;
 }
@@ -512,7 +512,7 @@ onMounted(() => {
 }
 
 .title-accent {
-  background: linear-gradient(135deg, var(--color-accent) 0%, #60a5fa 100%);
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-blue-light) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -555,11 +555,11 @@ onMounted(() => {
 }
 
 .button-primary {
-  background: linear-gradient(135deg, var(--color-accent) 0%, #2563EB 100%);
+  background: var(--gradient-blue);
   color: var(--color-text-primary);
-  border: 1px solid rgba(59, 130, 246, 0.3);
-  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3),
-              0 0 0 1px rgba(59, 130, 246, 0.1) inset;
+  border: 1px solid var(--color-blue-soft);
+  box-shadow: 0 4px 16px var(--color-blue-soft),
+              0 0 0 1px var(--color-blue-subtle) inset;
 }
 
 .button-primary::before {
@@ -574,10 +574,10 @@ onMounted(() => {
 }
 
 .button-primary:hover {
-  background: linear-gradient(135deg, #60A5FA 0%, var(--color-accent) 100%);
+  background: linear-gradient(135deg, var(--color-blue-light) 0%, var(--color-accent) 100%);
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(59, 130, 246, 0.4),
-              0 0 0 1px rgba(96, 165, 250, 0.15) inset;
+  box-shadow: 0 8px 28px var(--color-blue-medium),
+              0 0 0 1px hsla(217, 80%, 70%, 0.15) inset;
 }
 
 .button-primary:hover::before {
@@ -639,7 +639,7 @@ onMounted(() => {
     135deg,
     rgba(255, 255, 255, 0.15) 0%,
     rgba(255, 255, 255, 0.05) 50%,
-    rgba(59, 130, 246, 0.1) 100%
+    var(--color-blue-subtle) 100%
   );
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -647,7 +647,7 @@ onMounted(() => {
     0 8px 32px rgba(0, 0, 0, 0.2),
     inset 0 2px 8px rgba(255, 255, 255, 0.2),
     inset 0 -2px 8px rgba(0, 0, 0, 0.1),
-    0 0 40px rgba(59, 130, 246, 0.1);
+    var(--shadow-glow);
 }
 
 .bubble::before {
@@ -675,7 +675,7 @@ onMounted(() => {
   height: 20%;
   background: radial-gradient(
     circle,
-    rgba(59, 130, 246, 0.3) 0%,
+    var(--color-blue-soft) 0%,
     transparent 70%
   );
   border-radius: 50%;
@@ -810,18 +810,18 @@ onMounted(() => {
   height: 2px;
   background: linear-gradient(90deg,
     transparent,
-    rgba(59, 130, 246, 0.6),
+    var(--color-blue-medium),
     transparent);
   opacity: 0;
   transition: opacity 0.4s ease;
 }
 
 .service-card:hover {
-  border-color: rgba(59, 130, 246, 0.4);
+  border-color: var(--color-blue-medium);
   transform: translateY(-8px);
   box-shadow:
     0 24px 48px rgba(0, 0, 0, 0.3),
-    0 0 60px rgba(59, 130, 246, 0.15);
+    var(--shadow-glow);
 }
 
 .service-card:hover::before {
@@ -834,8 +834,8 @@ onMounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(37, 99, 235, 0.1) 100%);
-  border: 1px solid rgba(59, 130, 246, 0.2);
+  background: linear-gradient(135deg, var(--color-blue-soft) 0%, var(--color-blue-subtle) 100%);
+  border: 1px solid var(--color-blue-soft);
   border-radius: 12px;
   color: var(--color-accent);
   transition: all 0.3s ease;
@@ -844,9 +844,9 @@ onMounted(() => {
 .service-card:hover .service-icon {
   transform: scale(1.1) rotate(-5deg);
   background: linear-gradient(135deg,
-    rgba(59, 130, 246, 0.3) 0%,
-    rgba(37, 99, 235, 0.2) 100%);
-  box-shadow: 0 12px 28px rgba(59, 130, 246, 0.35);
+    var(--color-blue-medium) 0%,
+    var(--color-blue-soft) 100%);
+  box-shadow: 0 12px 28px var(--color-blue-soft);
 }
 
 .service-icon svg {
@@ -894,15 +894,15 @@ onMounted(() => {
 }
 
 .service-stat-item:hover {
-  border-color: rgba(59, 130, 246, 0.25);
+  border-color: var(--color-blue-soft);
   transform: translateY(-3px);
-  box-shadow: 0 12px 28px rgba(59, 130, 246, 0.12);
+  box-shadow: 0 12px 28px hsla(217, 91%, 60%, 0.12);
 }
 
 .service-stat-item .stat-value {
   font-size: 2.5rem;
   font-weight: 700;
-  background: linear-gradient(135deg, var(--color-accent) 0%, #60a5fa 100%);
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-blue-light) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -936,7 +936,7 @@ onMounted(() => {
 }
 
 .solution-item:hover {
-  border-color: rgba(59, 130, 246, 0.2);
+  border-color: var(--color-blue-soft);
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
 }
 
@@ -951,7 +951,7 @@ onMounted(() => {
 .solution-number {
   font-size: 3rem;
   font-weight: 700;
-  background: linear-gradient(135deg, var(--color-accent) 0%, #60a5fa 100%);
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-blue-light) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1009,17 +1009,17 @@ onMounted(() => {
   margin: 0 auto;
   padding: 4rem 3rem;
   background: linear-gradient(135deg,
-    rgba(59, 130, 246, 0.2) 0%,
-    rgba(37, 99, 235, 0.1) 100%);
+    var(--color-blue-soft) 0%,
+    var(--color-blue-subtle) 100%);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(59, 130, 246, 0.25);
+  border: 1px solid var(--color-blue-soft);
   border-radius: 16px;
   position: relative;
   overflow: hidden;
   box-shadow:
     0 20px 40px rgba(0, 0, 0, 0.2),
-    0 0 60px rgba(59, 130, 246, 0.1);
+    var(--shadow-glow);
 }
 
 /* 添加顶部光效 */
@@ -1032,7 +1032,7 @@ onMounted(() => {
   height: 2px;
   background: linear-gradient(90deg,
     transparent,
-    rgba(96, 165, 250, 0.8),
+    hsla(217, 80%, 70%, 0.8),
     transparent);
 }
 
@@ -1045,7 +1045,7 @@ onMounted(() => {
   width: 300px;
   height: 300px;
   background: radial-gradient(circle,
-    rgba(59, 130, 246, 0.25) 0%,
+    var(--color-blue-soft) 0%,
     transparent 70%);
   filter: blur(60px);
   animation: floatSlow 15s ease-in-out infinite;
@@ -1070,19 +1070,19 @@ onMounted(() => {
   padding: 1rem 2.5rem;
   font-size: 1rem;
   font-weight: 600;
-  background: linear-gradient(135deg, var(--color-accent) 0%, #2563EB 100%);
+  background: var(--gradient-blue);
   color: var(--color-text-primary);
-  border: 1px solid rgba(59, 130, 246, 0.3);
+  border: 1px solid var(--color-blue-soft);
   border-radius: 10px;
   text-decoration: none;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 16px var(--color-blue-soft);
 }
 
 .cta-button:hover {
-  background: linear-gradient(135deg, #60A5FA 0%, var(--color-accent) 100%);
+  background: linear-gradient(135deg, var(--color-blue-light) 0%, var(--color-accent) 100%);
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 8px 28px var(--color-blue-medium);
 }
 
 /* Case Study Section */
@@ -1145,9 +1145,9 @@ onMounted(() => {
 }
 
 .data-card:hover {
-  border-color: rgba(59, 130, 246, 0.4);
+  border-color: var(--color-blue-medium);
   transform: translateY(-3px);
-  box-shadow: 0 12px 28px rgba(59, 130, 246, 0.15);
+  box-shadow: 0 12px 28px hsla(217, 91%, 60%, 0.15);
 }
 
 .data-icon {
@@ -1156,8 +1156,8 @@ onMounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(37, 99, 235, 0.1) 100%);
-  border: 1px solid rgba(59, 130, 246, 0.2);
+  background: linear-gradient(135deg, var(--color-blue-soft) 0%, var(--color-blue-subtle) 100%);
+  border: 1px solid var(--color-blue-soft);
   border-radius: 12px;
   color: var(--color-accent);
   flex-shrink: 0;
@@ -1171,7 +1171,7 @@ onMounted(() => {
 .data-value {
   font-size: 1.75rem;
   font-weight: 700;
-  background: linear-gradient(135deg, var(--color-accent) 0%, #60a5fa 100%);
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-blue-light) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1206,9 +1206,9 @@ onMounted(() => {
 }
 
 .tech-card:hover {
-  border-color: rgba(59, 130, 246, 0.4);
+  border-color: var(--color-blue-medium);
   transform: translateY(-3px);
-  box-shadow: 0 12px 28px rgba(59, 130, 246, 0.15);
+  box-shadow: 0 12px 28px hsla(217, 91%, 60%, 0.15);
 }
 
 .tech-header {
@@ -1252,18 +1252,18 @@ onMounted(() => {
 
 .tech-tag {
   padding: 0.25rem 0.75rem;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(37, 99, 235, 0.08) 100%);
-  border: 1px solid rgba(59, 130, 246, 0.25);
+  background: linear-gradient(135deg, var(--color-blue-subtle) 0%, hsla(217, 91%, 60%, 0.08) 100%);
+  border: 1px solid hsla(217, 91%, 60%, 0.25);
   border-radius: 20px;
   font-size: 0.75rem;
   font-weight: 500;
-  color: rgba(96, 165, 250, 0.95);
+  color: hsla(217, 80%, 70%, 0.95);
   transition: all 0.2s ease;
 }
 
 .tech-card:hover .tech-tag {
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.25) 0%, rgba(37, 99, 235, 0.15) 100%);
-  border-color: rgba(59, 130, 246, 0.4);
+  background: linear-gradient(135deg, var(--color-blue-medium) 0%, var(--color-blue-soft) 100%);
+  border-color: var(--color-blue-medium);
 }
 
 /* Case Study CTA */
@@ -1276,21 +1276,21 @@ onMounted(() => {
   align-items: center;
   gap: 0.6rem;
   padding: 0.85rem 2rem;
-  color: rgba(96, 165, 250, 0.95);
+  color: hsla(217, 80%, 70%, 0.95);
   font-weight: 600;
   text-decoration: none;
-  border: 1px solid rgba(59, 130, 246, 0.3);
+  border: 1px solid var(--color-blue-soft);
   border-radius: 10px;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  background: rgba(59, 130, 246, 0.08);
+  background: var(--color-blue-subtle);
 }
 
 .case-cta-link:hover {
-  background: linear-gradient(135deg, var(--color-accent) 0%, #2563EB 100%);
+  background: var(--gradient-blue);
   color: var(--color-text-primary);
-  border-color: rgba(59, 130, 246, 0.5);
+  border-color: var(--color-blue-medium);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 8px 24px var(--color-blue-soft);
 }
 
 .case-cta-link:hover svg {
@@ -1386,12 +1386,12 @@ onMounted(() => {
 
 .modal-tag {
   padding: 0.3rem 0.85rem;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(37, 99, 235, 0.08) 100%);
-  border: 1px solid rgba(59, 130, 246, 0.25);
+  background: linear-gradient(135deg, var(--color-blue-subtle) 0%, hsla(217, 91%, 60%, 0.08) 100%);
+  border: 1px solid hsla(217, 91%, 60%, 0.25);
   border-radius: 20px;
   font-size: 0.8125rem;
   font-weight: 500;
-  color: rgba(96, 165, 250, 0.95);
+  color: hsla(217, 80%, 70%, 0.95);
 }
 
 .modal-desc {
@@ -1476,7 +1476,7 @@ onMounted(() => {
   width: 600px;
   height: 600px;
   background: radial-gradient(circle,
-    rgba(59, 130, 246, 0.3) 0%,
+    var(--color-blue-soft) 0%,
     transparent 70%);
   animation-delay: 0s;
 }
@@ -1499,8 +1499,8 @@ onMounted(() => {
   right: 0;
   bottom: 0;
   background-image:
-    linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+    linear-gradient(hsla(217, 91%, 60%, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, hsla(217, 91%, 60%, 0.03) 1px, transparent 1px);
   background-size: 50px 50px;
   mask-image: radial-gradient(ellipse at center, black 0%, transparent 70%);
   -webkit-mask-image: radial-gradient(ellipse at center, black 0%, transparent 70%);

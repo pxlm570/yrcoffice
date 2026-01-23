@@ -245,7 +245,7 @@ const currentTab = computed(() => tabs[activeTab.value])
   width: 800px;
   height: 800px;
   background: radial-gradient(circle,
-    rgba(59, 130, 246, 0.15) 0%,
+    var(--color-blue-subtle) 0%,
     transparent 70%);
   filter: blur(100px);
   animation: pulse 10s ease-in-out infinite;
@@ -346,12 +346,12 @@ const currentTab = computed(() => tabs[activeTab.value])
 .tab-item.is-active {
   color: rgba(255, 255, 255, 0.95);
   background: linear-gradient(135deg,
-    rgba(59, 130, 246, 0.25) 0%,
-    rgba(37, 99, 235, 0.15) 100%);
-  border: 1px solid rgba(59, 130, 246, 0.35);
+    var(--color-blue-medium) 0%,
+    var(--color-blue-subtle) 100%);
+  border: 1px solid var(--color-blue-medium);
   box-shadow:
-    0 4px 16px rgba(59, 130, 246, 0.25),
-    0 0 0 1px rgba(59, 130, 246, 0.1) inset;
+    0 4px 16px var(--color-blue-soft),
+    0 0 0 1px hsla(217, 91%, 60%, 0.1) inset;
 }
 
 /* Tab Content */
@@ -392,8 +392,8 @@ const currentTab = computed(() => tabs[activeTab.value])
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(37, 99, 235, 0.1) 100%);
-  border: 1px solid rgba(59, 130, 246, 0.25);
+  background: linear-gradient(135deg, var(--color-blue-soft) 0%, var(--color-blue-subtle) 100%);
+  border: 1px solid var(--color-blue-soft);
   border-radius: 14px;
   color: var(--color-accent);
 }
@@ -453,18 +453,18 @@ const currentTab = computed(() => tabs[activeTab.value])
   height: 2px;
   background: linear-gradient(90deg,
     transparent,
-    rgba(59, 130, 246, 0.6),
+    var(--color-blue-medium),
     transparent);
   opacity: 0;
   transition: opacity 0.4s ease;
 }
 
 .service-item-card:hover {
-  border-color: rgba(59, 130, 246, 0.4);
+  border-color: var(--color-blue-medium);
   transform: translateY(-6px);
   box-shadow:
     0 24px 48px rgba(0, 0, 0, 0.3),
-    0 0 40px rgba(59, 130, 246, 0.15);
+    var(--shadow-glow);
 }
 
 .service-item-card:hover::before {
@@ -495,18 +495,18 @@ const currentTab = computed(() => tabs[activeTab.value])
 
 .item-features li {
   padding: 0.35rem 0.85rem;
-  background: rgba(59, 130, 246, 0.1);
-  border: 1px solid rgba(59, 130, 246, 0.2);
+  background: var(--color-blue-subtle);
+  border: 1px solid hsla(217, 91%, 60%, 0.2);
   border-radius: 20px;
   font-size: 0.8125rem;
-  color: rgba(96, 165, 250, 0.9);
+  color: hsla(217, 80%, 70%, 0.9);
   font-weight: 500;
   transition: all 0.2s ease;
 }
 
 .service-item-card:hover .item-features li {
-  background: rgba(59, 130, 246, 0.15);
-  border-color: rgba(59, 130, 246, 0.3);
+  background: var(--color-blue-soft);
+  border-color: var(--color-blue-soft);
 }
 
 /* CTA Section */
@@ -519,9 +519,9 @@ const currentTab = computed(() => tabs[activeTab.value])
   max-width: 600px;
   margin: 0 auto;
   padding: 4rem 3rem;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(37, 99, 235, 0.08) 100%);
+  background: linear-gradient(135deg, var(--color-blue-soft) 0%, var(--color-blue-subtle) 100%);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(59, 130, 246, 0.25);
+  border: 1px solid var(--color-blue-soft);
   border-radius: 16px;
   position: relative;
   overflow: hidden;
@@ -534,7 +534,7 @@ const currentTab = computed(() => tabs[activeTab.value])
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.6), transparent);
+  background: linear-gradient(90deg, transparent, var(--color-blue-medium), transparent);
 }
 
 .cta-content::after {
@@ -544,7 +544,7 @@ const currentTab = computed(() => tabs[activeTab.value])
   right: -10%;
   width: 300px;
   height: 300px;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, var(--color-blue-soft) 0%, transparent 70%);
   filter: blur(60px);
 }
 
@@ -573,20 +573,20 @@ const currentTab = computed(() => tabs[activeTab.value])
   padding: 1rem 2.5rem;
   font-size: 1rem;
   font-weight: 600;
-  background: linear-gradient(135deg, var(--color-accent) 0%, #2563EB 100%);
+  background: var(--gradient-blue);
   color: var(--color-text-primary);
-  border: 1px solid rgba(59, 130, 246, 0.3);
+  border: 1px solid var(--color-blue-soft);
   border-radius: 10px;
   text-decoration: none;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 16px var(--color-blue-soft);
   position: relative;
   z-index: 1;
 }
 
 .cta-button:hover {
-  background: linear-gradient(135deg, #60A5FA 0%, var(--color-accent) 100%);
+  background: linear-gradient(135deg, var(--color-blue-light) 0%, var(--color-accent) 100%);
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 8px 28px var(--color-blue-medium);
 }
 </style>

@@ -24,10 +24,10 @@ import AppFooter from './components/AppFooter.vue'
 
 const themeOverrides = {
   common: {
-    primaryColor: '#f9fafb',
-    primaryColorHover: '#ffffff',
-    primaryColorPressed: '#e5e7eb',
-    primaryColorSuppl: '#f9fafb',
+    primaryColor: '#2563EB',                 // 统一蓝色主色
+    primaryColorHover: '#5B8CFF',            // 蓝色悬停（浅亮）
+    primaryColorPressed: '#1E4FCC',           // 蓝色按下（深色）
+    primaryColorSuppl: '#2563EB',            // 蓝色辅助
     bodyColor: '#e5e7eb',
     textColor1: '#f9fafb',
     textColor2: '#e5e7eb',
@@ -37,7 +37,7 @@ const themeOverrides = {
   Card: {
     color: 'rgba(255, 255, 255, 0.05)',
     colorModal: 'rgba(255, 255, 255, 0.08)',
-    borderColor: 'rgba(255, 255, 255, 0.1)',
+    borderColor: 'rgba(37, 99, 235, 0.15)',    // 蓝色边框
     borderRadius: '14px'
   },
   Button: {
@@ -49,17 +49,17 @@ const themeOverrides = {
   },
   Input: {
     borderRadius: '10px',
-    border: '1px solid rgba(255, 255, 255, 0.12)',
-    borderHover: '1px solid rgba(59, 130, 246, 0.3)',
-    borderFocus: '1px solid rgba(59, 130, 246, 0.5)',
+    border: '1px solid rgba(37, 99, 235, 0.2)',   // 统一蓝色边框
+    borderHover: '1px solid #2563EB',           // 主蓝色悬停
+    borderFocus: '1px solid #5B8CFF',           // 浅蓝色聚焦
     color: 'rgba(255, 255, 255, 0.06)',
     colorFocus: 'rgba(255, 255, 255, 0.08)'
   },
   Select: {
     borderRadius: '10px',
-    border: '1px solid rgba(255, 255, 255, 0.12)',
-    borderHover: '1px solid rgba(59, 130, 246, 0.3)',
-    borderActive: '1px solid rgba(59, 130, 246, 0.5)',
+    border: '1px solid rgba(37, 99, 235, 0.2)',   // 统一蓝色边框
+    borderHover: '1px solid #2563EB',           // 主蓝色悬停
+    borderActive: '1px solid #5B8CFF',           // 浅蓝色激活
     peers: {
       InternalSelection: {
         color: 'rgba(255, 255, 255, 0.06)',
@@ -102,16 +102,30 @@ const themeOverrides = {
   --color-border-default: rgba(255, 255, 255, 0.1);
   --color-border-strong: rgba(255, 255, 255, 0.15);
 
+  /* Blue Color System - 统一 HSL(217, 91%, x%) */
+  --color-blue-primary: #2563EB;      /* hsl(217, 91%, 60%) - 主蓝色 */
+  --color-blue-secondary: #1E4FCC;    /* hsl(217, 91%, 50%) - 次级蓝 */
+  --color-blue-tertiary: #173FA6;     /* hsl(217, 91%, 40%) - 三级蓝 */
+  --color-blue-light: #5B8CFF;        /* hsl(217, 80%, 70%) - 浅亮蓝 */
+  --color-blue-dark: #0D2647;         /* hsl(217, 91%, 25%) - 深蓝 */
+
+  /* Blue Transparency - 蓝色透明层级 */
+  --color-blue-subtle: hsla(217, 91%, 60%, 0.08);
+  --color-blue-soft: hsla(217, 91%, 60%, 0.15);
+  --color-blue-medium: hsla(217, 91%, 60%, 0.25);
+  --color-blue-strong: hsla(217, 91%, 60%, 0.40);
+
   /* Gradients */
   --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.04) 100%);
-  --gradient-accent: linear-gradient(135deg, #3B82F6 0%, #2563EB 50%, #1D4ED8 100%);
+  --gradient-accent: linear-gradient(135deg, #5B8CFF 0%, #2563EB 50%, #1E4FCC 100%);
   --gradient-white: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(200,200,220,0.85) 100%);
+  --gradient-blue: linear-gradient(135deg, #5B8CFF 0%, #2563EB 50%, #1E4FCC 100%);
 
   /* Shadows */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.15);
   --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.2);
-  --shadow-glow: 0 0 40px rgba(59, 130, 246, 0.15);
+  --shadow-glow: 0 0 40px hsla(217, 91%, 60%, 0.15);
 
   /* Spacing */
   --space-3xs: 2px;

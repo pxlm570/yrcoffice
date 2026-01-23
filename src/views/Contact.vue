@@ -394,8 +394,8 @@ const getServiceLabel = (value) => {
   transform: translateY(-8px);
   box-shadow:
     0 24px 60px rgba(0, 0, 0, 0.35),
-    0 0 60px rgba(59, 130, 246, 0.1);
-  border-color: rgba(59, 130, 246, 0.2);
+    var(--shadow-glow);
+  border-color: hsla(217, 91%, 60%, 0.2);
 }
 
 /* Card Title */
@@ -446,11 +446,11 @@ const getServiceLabel = (value) => {
 
 .contact-item:hover {
   background: linear-gradient(135deg,
-    rgba(59, 130, 246, 0.12) 0%,
-    rgba(37, 99, 235, 0.06) 100%);
+    var(--color-blue-subtle) 0%,
+    hsla(217, 91%, 50%, 0.06) 100%);
   transform: translateX(8px);
-  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.15);
-  border-color: rgba(59, 130, 246, 0.25);
+  box-shadow: 0 8px 20px hsla(217, 91%, 60%, 0.15);
+  border-color: var(--color-blue-soft);
 }
 
 .contact-icon {
@@ -474,9 +474,9 @@ const getServiceLabel = (value) => {
 .contact-item:hover .contact-icon {
   transform: scale(1.1);
   background: linear-gradient(135deg,
-    rgba(59, 130, 246, 0.25) 0%,
-    rgba(37, 99, 235, 0.15) 100%);
-  border-color: rgba(59, 130, 246, 0.4);
+    var(--color-blue-soft) 0%,
+    var(--color-blue-subtle) 100%);
+  border-color: var(--color-blue-medium);
 }
 
 .contact-details h3 {
@@ -579,18 +579,18 @@ const getServiceLabel = (value) => {
 .contact-form-card :deep(.n-input:hover .n-input__wrapper),
 .contact-form-card :deep(.n-base-selection:hover) {
   background: rgba(255, 255, 255, 0.08) !important;
-  border-color: rgba(59, 130, 246, 0.3) !important;
+  border-color: var(--color-blue-soft) !important;
   box-shadow:
     0 4px 16px rgba(0, 0, 0, 0.15),
-    0 0 20px rgba(59, 130, 246, 0.1);
+    var(--shadow-glow);
 }
 
 .contact-form-card :deep(.n-input:focus-within .n-input__wrapper),
 .contact-form-card :deep(.n-base-selection--focus .n-base-selection__border) {
-  border-color: rgba(59, 130, 246, 0.5) !important;
+  border-color: var(--color-blue-medium) !important;
   box-shadow:
-    0 0 0 3px rgba(59, 130, 246, 0.15),
-    0 4px 16px rgba(59, 130, 246, 0.2);
+    0 0 0 3px hsla(217, 91%, 60%, 0.15),
+    0 4px 16px hsla(217, 91%, 60%, 0.2);
 }
 
 .contact-form-card :deep(.n-button--primary) {

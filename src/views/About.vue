@@ -29,7 +29,7 @@
             <n-gi>
               <n-card hoverable class="value-card">
                 <template #header>
-                  <div class="value-icon" style="background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);">
+                  <div class="value-icon" style="background: var(--gradient-blue);">
                     <n-icon size="32" color="white">
                       <svg viewBox="0 0 24 24">
                         <path fill="currentColor" d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm-1.06 13.54L7.4 12l1.41-1.41 2.12 2.12 4.24-4.24 1.41 1.41-5.64 5.66z"/>
@@ -44,7 +44,7 @@
             <n-gi>
               <n-card hoverable class="value-card">
                 <template #header>
-                  <div class="value-icon" style="background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%);">
+                  <div class="value-icon" style="background: linear-gradient(135deg, var(--color-blue-light) 0%, var(--color-blue-primary) 100%);">
                     <n-icon size="32" color="white">
                       <svg viewBox="0 0 24 24">
                         <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
@@ -59,7 +59,7 @@
             <n-gi>
               <n-card hoverable class="value-card">
                 <template #header>
-                  <div class="value-icon" style="background: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%);">
+                  <div class="value-icon" style="background: linear-gradient(135deg, var(--color-blue-primary) 0%, var(--color-blue-light) 100%);">
                     <n-icon size="32" color="white">
                       <svg viewBox="0 0 24 24">
                         <path fill="currentColor" d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
@@ -119,9 +119,9 @@ const logoUrl = 'https://cdn.micono.eu.org/icon/logo.png'
 
 .page-hero {
   background: linear-gradient(135deg,
-    rgba(59, 130, 246, 0.18) 0%,
-    rgba(37, 99, 235, 0.12) 50%,
-    rgba(96, 165, 250, 0.08) 100%);
+    hsla(217, 91%, 60%, 0.18) 0%,
+    hsla(217, 91%, 50%, 0.12) 50%,
+    hsla(217, 80%, 70%, 0.08) 100%);
   background-size: 200% 200%;
   animation: gradientShift 30s ease infinite;
   padding: 100px 20px 80px;
@@ -145,7 +145,7 @@ const logoUrl = 'https://cdn.micono.eu.org/icon/logo.png'
   width: 600px;
   height: 600px;
   background: radial-gradient(circle,
-    rgba(59, 130, 246, 0.15) 0%,
+    var(--color-blue-subtle) 0%,
     transparent 70%);
   filter: blur(80px);
   animation: pulse 10s ease-in-out infinite;
@@ -234,7 +234,7 @@ const logoUrl = 'https://cdn.micono.eu.org/icon/logo.png'
   left: 0;
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, #2563EB, #3B82F6, #60A5FA);
+  background: var(--gradient-blue);
   border-radius: 2px;
 }
 
@@ -256,8 +256,8 @@ const logoUrl = 'https://cdn.micono.eu.org/icon/logo.png'
   height: 280px;
   border-radius: 24px;
   box-shadow:
-    0 25px 50px rgba(59, 130, 246, 0.15),
-    0 0 0 1px rgba(59, 130, 246, 0.1) inset;
+    0 25px 50px hsla(217, 91%, 60%, 0.15),
+    0 0 0 1px hsla(217, 91%, 60%, 0.1) inset;
   transition: all var(--transition-slow);
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
@@ -270,9 +270,9 @@ const logoUrl = 'https://cdn.micono.eu.org/icon/logo.png'
 .about-logo:hover {
   transform: translateY(-10px) rotate(2deg);
   box-shadow:
-    0 35px 60px rgba(59, 130, 246, 0.25),
-    0 0 30px rgba(59, 130, 246, 0.2);
-  border-color: rgba(59, 130, 246, 0.3);
+    0 35px 60px hsla(217, 91%, 60%, 0.25),
+    0 0 30px hsla(217, 91%, 60%, 0.2);
+  border-color: var(--color-blue-soft);
 }
 
 .section-title {
@@ -293,7 +293,7 @@ const logoUrl = 'https://cdn.micono.eu.org/icon/logo.png'
   transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, #2563EB, #3B82F6, #60A5FA);
+  background: var(--gradient-blue);
   border-radius: 2px;
 }
 
@@ -333,8 +333,8 @@ const logoUrl = 'https://cdn.micono.eu.org/icon/logo.png'
   transform: translateY(-10px);
   box-shadow:
     0 30px 60px rgba(0, 0, 0, 0.35),
-    0 0 40px rgba(59, 130, 246, 0.2);
-  border-color: rgba(59, 130, 246, 0.4);
+    var(--shadow-glow);
+  border-color: var(--color-blue-medium);
 }
 
 .value-card:hover::before {
@@ -408,10 +408,10 @@ const logoUrl = 'https://cdn.micono.eu.org/icon/logo.png'
 }
 
 .advantages-section :deep(.n-list-item:hover) {
-  background: rgba(59, 130, 246, 0.08);
-  border-color: rgba(59, 130, 246, 0.2);
+  background: var(--color-blue-subtle);
+  border-color: hsla(217, 91%, 60%, 0.2);
   transform: translateX(8px);
-  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.15);
+  box-shadow: 0 8px 20px hsla(217, 91%, 60%, 0.15);
 }
 
 .advantages-section :deep(.n-thing__title) {

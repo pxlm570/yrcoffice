@@ -95,7 +95,7 @@ onUnmounted(() => {
   box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.15),
     0 0 0 1px rgba(255, 255, 255, 0.08) inset,
-    0 0 60px rgba(59, 130, 246, 0.05);
+    var(--shadow-glow);
 
   pointer-events: auto;
   transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
@@ -208,16 +208,16 @@ onUnmounted(() => {
   left: 50%;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #3B82F6, #60A5FA);
+  background: linear-gradient(90deg, var(--color-blue-primary), var(--color-blue-light));
   transform: translateX(-50%);
   transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   border-radius: 2px;
-  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 10px hsla(217, 91%, 60%, 0.5);
 }
 
 .nav-item:hover {
   color: rgba(255, 255, 255, 1);
-  background: rgba(59, 130, 246, 0.1);
+  background: var(--color-blue-subtle);
 }
 
 .nav-item:hover::after {
