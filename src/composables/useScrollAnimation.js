@@ -7,21 +7,25 @@ import { onMounted, onUnmounted } from 'vue'
  * 用法:
  * import { useScrollAnimation } from '@/composables/useScrollAnimation'
  *
- * const { isVisible } = useScrollAnimation()
+ * const { refresh } = useScrollAnimation()
  *
  * // 在模板中为需要动画的元素添加 .animate-on-scroll 类
  * // 元素进入视口时会自动添加 .is-visible 类
  */
 export function useScrollAnimation() {
-  // 使用 ref 存储可见性状态（可选，如果需要在组件中使用）
-  // 主要通过 IntersectionObserver 直接操作 DOM
+  let observer = null
 
   const checkVisibility = () => {
+    // 如果已有观察器，先断开
+    if (observer) {
+      observer.disconnect()
+    }
+
     const elements = document.querySelectorAll('.animate-on-scroll')
 
     if (elements.length === 0) return
 
-    const observer = new IntersectionObserver(
+    observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -42,11 +46,19 @@ export function useScrollAnimation() {
 
   onMounted(() => {
     // 延迟执行以确保DOM已渲染
+    // 100ms 延迟确保 Vue 的 DOM 更新完成
     setTimeout(checkVisibility, 100)
   })
 
-  // 返回空对象，因为这个 composable 主要通过 CSS 类工作
+  onUnmounted(() => {
+    // 组件卸载时清理观察器，防止内存泄漏
+    if (observer) {
+      observer.disconnect()
+      observer = null
+    }
+  })
+
   return {
-    isVisible: false // 占位值，实际功能通过观察器实现
+    refresh: checkVisibility  // 提供手动刷新方法
   }
 }
