@@ -29,6 +29,39 @@ const themeOverrides = {
     textColor2: '#e5e7eb',
     textColor3: '#d1d5db',
     textColorDisabled: '#6b7280'
+  },
+  Card: {
+    color: 'rgba(255, 255, 255, 0.05)',
+    colorModal: 'rgba(255, 255, 255, 0.08)',
+    borderColor: 'rgba(255, 255, 255, 0.1)',
+    borderRadius: '14px'
+  },
+  Button: {
+    borderRadiusMedium: '10px',
+    borderRadiusLarge: '12px',
+    textColor: '#0a0a0f',
+    textColorHover: '#0a0a0f',
+    textColorPressed: '#0a0a0f'
+  },
+  Input: {
+    borderRadius: '10px',
+    border: '1px solid rgba(255, 255, 255, 0.12)',
+    borderHover: '1px solid rgba(59, 130, 246, 0.3)',
+    borderFocus: '1px solid rgba(59, 130, 246, 0.5)',
+    color: 'rgba(255, 255, 255, 0.06)',
+    colorFocus: 'rgba(255, 255, 255, 0.08)'
+  },
+  Select: {
+    borderRadius: '10px',
+    border: '1px solid rgba(255, 255, 255, 0.12)',
+    borderHover: '1px solid rgba(59, 130, 246, 0.3)',
+    borderActive: '1px solid rgba(59, 130, 246, 0.5)',
+    peers: {
+      InternalSelection: {
+        color: 'rgba(255, 255, 255, 0.06)',
+        colorActive: 'rgba(255, 255, 255, 0.08)'
+      }
+    }
   }
 }
 </script>
