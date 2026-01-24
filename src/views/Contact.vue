@@ -279,7 +279,8 @@ const getServiceLabel = (value) => {
 <style scoped>
 .contact-page {
   min-height: calc(100vh - 128px);
-  background: linear-gradient(180deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%);
+  /* background: linear-gradient(180deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%); */
+  background: var(--color-bg-primary);
 }
 
 /* Hero Section */
@@ -316,10 +317,11 @@ const getServiceLabel = (value) => {
 .hero-title {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 100%);
+  /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
+  background-clip: text; */
+  color: rgba(255, 255, 255, 0.95);
   font-weight: 700;
   animation: fadeInUp 0.8s ease-out;
 }
@@ -362,9 +364,10 @@ const getServiceLabel = (value) => {
 
 /* Card Styles */
 .card {
-  background: linear-gradient(135deg,
+  /* background: linear-gradient(135deg,
     rgba(255, 255, 255, 0.08) 0%,
-    rgba(255, 255, 255, 0.02) 100%);
+    rgba(255, 255, 255, 0.02) 100%); */
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -383,10 +386,11 @@ const getServiceLabel = (value) => {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg,
+  /* background: linear-gradient(90deg,
     transparent,
     rgba(255, 255, 255, 0.15),
-    transparent);
+    transparent); */
+  background: rgba(255, 255, 255, 0.15);
   opacity: 0.5;
 }
 
@@ -436,18 +440,20 @@ const getServiceLabel = (value) => {
   gap: 16px;
   margin-bottom: 24px;
   padding: 18px;
-  background: linear-gradient(135deg,
+  /* background: linear-gradient(135deg,
     rgba(255, 255, 255, 0.06) 0%,
-    rgba(255, 255, 255, 0.02) 100%);
+    rgba(255, 255, 255, 0.02) 100%); */
+  background: rgba(255, 255, 255, 0.06);
   border-radius: 14px;
   transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .contact-item:hover {
-  background: linear-gradient(135deg,
+  /* background: linear-gradient(135deg,
     var(--color-blue-subtle) 0%,
-    hsla(217, 91%, 50%, 0.06) 100%);
+    hsla(217, 91%, 50%, 0.06) 100%); */
+  background: var(--color-blue-subtle);
   transform: translateX(8px);
   box-shadow: 0 8px 20px hsla(217, 91%, 60%, 0.15);
   border-color: var(--color-blue-soft);
@@ -457,9 +463,10 @@ const getServiceLabel = (value) => {
   width: 52px;
   height: 52px;
   border-radius: 14px;
-  background: linear-gradient(135deg,
+  /* background: linear-gradient(135deg,
     rgba(255, 255, 255, 0.15) 0%,
-    rgba(255, 255, 255, 0.08) 100%);
+    rgba(255, 255, 255, 0.08) 100%); */
+  background: rgba(255, 255, 255, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   align-items: center;
@@ -473,9 +480,10 @@ const getServiceLabel = (value) => {
 
 .contact-item:hover .contact-icon {
   transform: scale(1.1);
-  background: linear-gradient(135deg,
+  /* background: linear-gradient(135deg,
     var(--color-blue-soft) 0%,
-    var(--color-blue-subtle) 100%);
+    var(--color-blue-subtle) 100%); */
+  background: var(--color-blue-soft);
   border-color: var(--color-blue-medium);
 }
 
@@ -523,7 +531,8 @@ const getServiceLabel = (value) => {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
+  /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%); */
+  background: rgba(255, 255, 255, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   align-items: center;
@@ -539,7 +548,8 @@ const getServiceLabel = (value) => {
   box-shadow:
     0 8px 20px rgba(0, 0, 0, 0.4);
   border-color: rgba(255, 255, 255, 0.3);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+  /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%); */
+  background: rgba(255, 255, 255, 0.2);
 }
 
 /* Right Card - Form */
@@ -594,7 +604,8 @@ const getServiceLabel = (value) => {
 }
 
 .contact-form-card :deep(.n-button--primary) {
-  background: linear-gradient(135deg, #5B8CFF 0%, #2563EB 50%, #1E4FCC 100%);
+  /* background: linear-gradient(135deg, #5B8CFF 0%, #2563EB 50%, #1E4FCC 100%); */
+  background: #2563EB;
   border: 1px solid rgba(91, 140, 255, 0.4);
   color: #ffffff !important;
   box-shadow: 0 6px 20px hsla(217, 91%, 60%, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
@@ -614,7 +625,8 @@ const getServiceLabel = (value) => {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  /* background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent); */
+  background: rgba(255, 255, 255, 0.25);
   transition: left 0.5s ease;
   z-index: 0;
 }
@@ -630,7 +642,8 @@ const getServiceLabel = (value) => {
 }
 
 .contact-form-card :deep(.n-button--primary:hover) {
-  background: linear-gradient(135deg, #7AA7FF 0%, #3B82F6 50%, #2563EB 100%);
+  /* background: linear-gradient(135deg, #7AA7FF 0%, #3B82F6 50%, #2563EB 100%); */
+  background: #3B82F6;
   transform: translateY(-3px);
   box-shadow: 0 10px 30px hsla(217, 91%, 60%, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
   border-color: rgba(91, 140, 255, 0.6);

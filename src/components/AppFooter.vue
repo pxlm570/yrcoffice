@@ -76,9 +76,10 @@ const currentYear = computed(() => new Date().getFullYear())
 }
 
 .footer-inner {
-  background: linear-gradient(135deg,
+  /* background: linear-gradient(135deg,
     rgba(10, 10, 15, 0.95) 0%,
-    rgba(18, 18, 26, 0.9) 100%);
+    rgba(18, 18, 26, 0.9) 100%); */
+  background: rgba(10, 10, 15, 0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -101,10 +102,11 @@ const currentYear = computed(() => new Date().getFullYear())
   left: 15%;
   right: 15%;
   height: 1px;
-  background: linear-gradient(90deg,
+  /* background: linear-gradient(90deg,
     transparent,
     rgba(59, 130, 246, 0.3),
-    transparent);
+    transparent); */
+  background: rgba(59, 130, 246, 0.3);
 }
 
 @media (min-width: 640px) {
@@ -285,9 +287,10 @@ const currentYear = computed(() => new Date().getFullYear())
   left: 0;
   width: 0;
   height: 1px;
-  background: linear-gradient(90deg,
+  /* background: linear-gradient(90deg,
     rgba(59, 130, 246, 0.6),
-    rgba(96, 165, 250, 0.6));
+    rgba(96, 165, 250, 0.6)); */
+  background: rgba(59, 130, 246, 0.6);
   transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
 }
@@ -326,9 +329,10 @@ const currentYear = computed(() => new Date().getFullYear())
   left: 0;
   width: 0;
   height: 1px;
-  background: linear-gradient(90deg,
+  /* background: linear-gradient(90deg,
     rgba(59, 130, 246, 0.6),
-    rgba(96, 165, 250, 0.6));
+    rgba(96, 165, 250, 0.6)); */
+  background: rgba(59, 130, 246, 0.6);
   transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
 }

@@ -401,7 +401,8 @@ onMounted(() => {
 <style scoped>
 /* Hero Section */
 .home {
-  background: linear-gradient(180deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%);
+  /* background: linear-gradient(180deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%); */
+  background: var(--color-bg-primary);
   position: relative;
   overflow: hidden;
 }
@@ -512,10 +513,11 @@ onMounted(() => {
 }
 
 .title-accent {
-  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-blue-light) 100%);
+  /* background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-blue-light) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
+  background-clip: text; */
+  color: var(--color-accent);
 }
 
 .hero-subtitle {
@@ -569,12 +571,14 @@ onMounted(() => {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  /* background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent); */
+  background: rgba(255, 255, 255, 0.2);
   transition: left 0.5s ease;
 }
 
 .button-primary:hover {
-  background: linear-gradient(135deg, var(--color-blue-light) 0%, var(--color-accent) 100%);
+  /* background: linear-gradient(135deg, var(--color-blue-light) 0%, var(--color-accent) 100%); */
+  background: var(--color-blue-light);
   transform: translateY(-2px);
   box-shadow: 0 8px 28px var(--color-blue-medium),
               0 0 0 1px hsla(217, 80%, 70%, 0.15) inset;
@@ -635,12 +639,13 @@ onMounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(
+  /* background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.15) 0%,
     rgba(255, 255, 255, 0.05) 50%,
     var(--color-blue-subtle) 100%
-  );
+  ); */
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow:
@@ -657,11 +662,12 @@ onMounted(() => {
   left: 20%;
   width: 40%;
   height: 30%;
-  background: linear-gradient(
+  /* background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.4) 0%,
     rgba(255, 255, 255, 0.1) 100%
-  );
+  ); */
+  background: rgba(255, 255, 255, 0.4);
   border-radius: 50%;
   filter: blur(2px);
 }
@@ -753,10 +759,11 @@ onMounted(() => {
 .section-title {
   font-size: clamp(2rem, 4vw, 2.5rem);
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 100%);
+  /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
+  background-clip: text; */
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .section-subtitle {
@@ -785,9 +792,10 @@ onMounted(() => {
 }
 
 .service-card {
-  background: linear-gradient(135deg,
+  /* background: linear-gradient(135deg,
     rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0.03) 100%);
+    rgba(255, 255, 255, 0.03) 100%); */
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -808,10 +816,11 @@ onMounted(() => {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg,
+  /* background: linear-gradient(90deg,
     transparent,
     var(--color-blue-medium),
-    transparent);
+    transparent); */
+  background: var(--color-blue-medium);
   opacity: 0;
   transition: opacity 0.4s ease;
 }
@@ -834,7 +843,8 @@ onMounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--color-blue-soft) 0%, var(--color-blue-subtle) 100%);
+  /* background: linear-gradient(135deg, var(--color-blue-soft) 0%, var(--color-blue-subtle) 100%); */
+  background: var(--color-blue-soft);
   border: 1px solid var(--color-blue-soft);
   border-radius: 12px;
   color: var(--color-accent);
@@ -843,9 +853,10 @@ onMounted(() => {
 
 .service-card:hover .service-icon {
   transform: scale(1.1) rotate(-5deg);
-  background: linear-gradient(135deg,
+  /* background: linear-gradient(135deg,
     var(--color-blue-medium) 0%,
-    var(--color-blue-soft) 100%);
+    var(--color-blue-soft) 100%); */
+  background: var(--color-blue-medium);
   box-shadow: 0 12px 28px var(--color-blue-soft);
 }
 
@@ -886,7 +897,8 @@ onMounted(() => {
 .service-stat-item {
   text-align: center;
   padding: 2rem 1.5rem;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+  /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%); */
+  background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 14px;
@@ -902,10 +914,11 @@ onMounted(() => {
 .service-stat-item .stat-value {
   font-size: 2.5rem;
   font-weight: 700;
-  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-blue-light) 100%);
+  /* background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-blue-light) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
+  background-clip: text; */
+  color: var(--color-accent);
   line-height: 1;
   margin-bottom: 0.5rem;
 }
@@ -929,7 +942,8 @@ onMounted(() => {
   gap: 2rem;
   align-items: start;
   padding: 1.5rem;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+  /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%); */
+  background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 14px;
   transition: all 0.3s ease;
@@ -937,7 +951,8 @@ onMounted(() => {
 
 .solution-item:hover {
   border-color: var(--color-blue-soft);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
+  /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%); */
+  background: rgba(255, 255, 255, 0.06);
 }
 
 @media (max-width: 640px) {
@@ -951,10 +966,11 @@ onMounted(() => {
 .solution-number {
   font-size: 3rem;
   font-weight: 700;
-  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-blue-light) 100%);
+  /* background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-blue-light) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
+  background-clip: text; */
+  color: var(--color-accent);
   opacity: 0.3;
   line-height: 1;
 }
@@ -1008,9 +1024,10 @@ onMounted(() => {
   max-width: 640px;
   margin: 0 auto;
   padding: 4rem 3rem;
-  background: linear-gradient(135deg,
+  /* background: linear-gradient(135deg,
     var(--color-blue-soft) 0%,
-    var(--color-blue-subtle) 100%);
+    var(--color-blue-subtle) 100%); */
+  background: var(--color-blue-soft);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--color-blue-soft);
@@ -1030,10 +1047,11 @@ onMounted(() => {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg,
+  /* background: linear-gradient(90deg,
     transparent,
     hsla(217, 80%, 70%, 0.8),
-    transparent);
+    transparent); */
+  background: hsla(217, 80%, 70%, 0.8);
 }
 
 /* 添加内部光晕 */
@@ -1070,7 +1088,8 @@ onMounted(() => {
   padding: 1rem 2.5rem;
   font-size: 1rem;
   font-weight: 600;
-  background: linear-gradient(135deg, #5B8CFF 0%, #2563EB 50%, #1E4FCC 100%);
+  /* background: linear-gradient(135deg, #5B8CFF 0%, #2563EB 50%, #1E4FCC 100%); */
+  background: #2563EB;
   color: #ffffff;
   border: 1px solid rgba(91, 140, 255, 0.4);
   border-radius: 10px;
@@ -1088,12 +1107,14 @@ onMounted(() => {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  /* background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent); */
+  background: rgba(255, 255, 255, 0.25);
   transition: left 0.6s ease;
 }
 
 .cta-button:hover {
-  background: linear-gradient(135deg, #7AA7FF 0%, #3B82F6 50%, #2563EB 100%);
+  /* background: linear-gradient(135deg, #7AA7FF 0%, #3B82F6 50%, #2563EB 100%); */
+  background: #3B82F6;
   transform: translateY(-2px);
   box-shadow: 0 8px 28px hsla(217, 91%, 60%, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
   border-color: rgba(91, 140, 255, 0.6);
@@ -1154,7 +1175,8 @@ onMounted(() => {
   align-items: center;
   gap: 1rem;
   padding: 1.25rem;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
+  /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%); */
+  background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 14px;
@@ -1174,7 +1196,8 @@ onMounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--color-blue-soft) 0%, var(--color-blue-subtle) 100%);
+  /* background: linear-gradient(135deg, var(--color-blue-soft) 0%, var(--color-blue-subtle) 100%); */
+  background: var(--color-blue-soft);
   border: 1px solid var(--color-blue-soft);
   border-radius: 12px;
   color: var(--color-accent);
@@ -1189,10 +1212,11 @@ onMounted(() => {
 .data-value {
   font-size: 1.75rem;
   font-weight: 700;
-  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-blue-light) 100%);
+  /* background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-blue-light) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
+  background-clip: text; */
+  color: var(--color-accent);
 }
 
 .data-label {
@@ -1214,7 +1238,8 @@ onMounted(() => {
 }
 
 .tech-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
+  /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%); */
+  background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 14px;
@@ -1270,7 +1295,8 @@ onMounted(() => {
 
 .tech-tag {
   padding: 0.25rem 0.75rem;
-  background: linear-gradient(135deg, var(--color-blue-subtle) 0%, hsla(217, 91%, 60%, 0.08) 100%);
+  /* background: linear-gradient(135deg, var(--color-blue-subtle) 0%, hsla(217, 91%, 60%, 0.08) 100%); */
+  background: var(--color-blue-subtle);
   border: 1px solid hsla(217, 91%, 60%, 0.25);
   border-radius: 20px;
   font-size: 0.75rem;
@@ -1280,7 +1306,8 @@ onMounted(() => {
 }
 
 .tech-card:hover .tech-tag {
-  background: linear-gradient(135deg, var(--color-blue-medium) 0%, var(--color-blue-soft) 100%);
+  /* background: linear-gradient(135deg, var(--color-blue-medium) 0%, var(--color-blue-soft) 100%); */
+  background: var(--color-blue-medium);
   border-color: var(--color-blue-medium);
 }
 
@@ -1336,7 +1363,8 @@ onMounted(() => {
 }
 
 .modal-content {
-  background: linear-gradient(135deg, rgba(18, 18, 26, 0.95) 0%, rgba(10, 10, 15, 0.98) 100%);
+  /* background: linear-gradient(135deg, rgba(18, 18, 26, 0.95) 0%, rgba(10, 10, 15, 0.98) 100%); */
+  background: rgba(18, 18, 26, 0.95);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
@@ -1404,7 +1432,8 @@ onMounted(() => {
 
 .modal-tag {
   padding: 0.3rem 0.85rem;
-  background: linear-gradient(135deg, var(--color-blue-subtle) 0%, hsla(217, 91%, 60%, 0.08) 100%);
+  /* background: linear-gradient(135deg, var(--color-blue-subtle) 0%, hsla(217, 91%, 60%, 0.08) 100%); */
+  background: var(--color-blue-subtle);
   border: 1px solid hsla(217, 91%, 60%, 0.25);
   border-radius: 20px;
   font-size: 0.8125rem;
