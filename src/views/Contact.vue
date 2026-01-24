@@ -594,14 +594,10 @@ const getServiceLabel = (value) => {
 }
 
 .contact-form-card :deep(.n-button--primary) {
-  background: linear-gradient(135deg,
-    rgba(255, 255, 255, 0.9) 0%,
-    rgba(220, 220, 240, 0.85) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: var(--color-bg-primary);
-  box-shadow:
-    0 6px 20px rgba(0, 0, 0, 0.25),
-    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  background: linear-gradient(135deg, #5B8CFF 0%, #2563EB 50%, #1E4FCC 100%);
+  border: 1px solid rgba(91, 140, 255, 0.4);
+  color: #ffffff !important;
+  box-shadow: 0 6px 20px hsla(217, 91%, 60%, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
   transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
   font-size: 1rem;
   font-weight: 600;
@@ -617,22 +613,22 @@ const getServiceLabel = (value) => {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg,
-    transparent,
-    rgba(255, 255, 255, 0.4),
-    transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
   transition: left 0.5s ease;
+  z-index: 0;
+}
+
+.contact-form-card :deep(.n-button__content) {
+  position: relative;
+  z-index: 1;
 }
 
 .contact-form-card :deep(.n-button--primary:hover) {
-  background: linear-gradient(135deg,
-    rgba(255, 255, 255, 0.95) 0%,
-    rgba(230, 230, 250, 0.9) 100%);
+  background: linear-gradient(135deg, #7AA7FF 0%, #3B82F6 50%, #2563EB 100%);
   transform: translateY(-3px);
-  box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.3),
-    0 0 0 1px rgba(255, 255, 255, 0.15) inset;
-  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 10px 30px hsla(217, 91%, 60%, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+  border-color: rgba(91, 140, 255, 0.6);
+  color: #ffffff !important;
 }
 
 .contact-form-card :deep(.n-button--primary:hover::before) {
@@ -641,8 +637,7 @@ const getServiceLabel = (value) => {
 
 .contact-form-card :deep(.n-button--primary:active) {
   transform: scale(0.96) translateY(-1px);
-  box-shadow:
-    0 4px 12px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 4px 12px hsla(217, 91%, 60%, 0.3);
 }
 
 /* Responsive */

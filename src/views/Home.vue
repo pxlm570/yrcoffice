@@ -1070,19 +1070,37 @@ onMounted(() => {
   padding: 1rem 2.5rem;
   font-size: 1rem;
   font-weight: 600;
-  background: var(--gradient-blue);
-  color: var(--color-text-primary);
-  border: 1px solid var(--color-blue-soft);
+  background: linear-gradient(135deg, #5B8CFF 0%, #2563EB 50%, #1E4FCC 100%);
+  color: #ffffff;
+  border: 1px solid rgba(91, 140, 255, 0.4);
   border-radius: 10px;
   text-decoration: none;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 16px var(--color-blue-soft);
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 4px 16px hsla(217, 91%, 60%, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  transition: left 0.6s ease;
 }
 
 .cta-button:hover {
-  background: linear-gradient(135deg, var(--color-blue-light) 0%, var(--color-accent) 100%);
+  background: linear-gradient(135deg, #7AA7FF 0%, #3B82F6 50%, #2563EB 100%);
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px var(--color-blue-medium);
+  box-shadow: 0 8px 28px hsla(217, 91%, 60%, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+  border-color: rgba(91, 140, 255, 0.6);
+}
+
+.cta-button:hover::before {
+  left: 100%;
 }
 
 /* Case Study Section */

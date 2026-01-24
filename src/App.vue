@@ -43,9 +43,11 @@ const themeOverrides = {
   Button: {
     borderRadiusMedium: '10px',
     borderRadiusLarge: '12px',
-    textColor: '#0a0a0f',
-    textColorHover: '#0a0a0f',
-    textColorPressed: '#0a0a0f'
+    textColor: '#ffffff',
+    textColorHover: '#ffffff',
+    textColorPressed: '#ffffff',
+    textColorFocus: '#ffffff',
+    textColorDisabled: 'rgba(255, 255, 255, 0.5)'
   },
   Input: {
     borderRadius: '10px',

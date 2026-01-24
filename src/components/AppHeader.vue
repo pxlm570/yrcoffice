@@ -240,18 +240,14 @@ onUnmounted(() => {
   padding: 0.625rem 1.25rem;
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--color-bg-primary);
-  background: linear-gradient(135deg,
-    rgba(255, 255, 255, 0.95) 0%,
-    rgba(220, 220, 240, 0.9) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  background: linear-gradient(135deg, #5B8CFF 0%, #2563EB 50%, #1E4FCC 100%);
+  border: 1px solid rgba(91, 140, 255, 0.4);
   border-radius: 0.75rem;
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
   white-space: nowrap;
-  box-shadow:
-    0 4px 16px rgba(0, 0, 0, 0.15),
-    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  box-shadow: 0 4px 16px hsla(217, 91%, 60%, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -264,18 +260,15 @@ onUnmounted(() => {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg,
-    transparent,
-    rgba(255, 255, 255, 0.4),
-    transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
   transition: left 0.5s ease;
 }
 
 .cta-button:hover {
+  background: linear-gradient(135deg, #7AA7FF 0%, #3B82F6 50%, #2563EB 100%);
   transform: translateY(-2px);
-  box-shadow:
-    0 8px 24px rgba(0, 0, 0, 0.2),
-    0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+  box-shadow: 0 8px 24px hsla(217, 91%, 60%, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+  border-color: rgba(91, 140, 255, 0.6);
 }
 
 .cta-button:hover::before {
@@ -284,9 +277,7 @@ onUnmounted(() => {
 
 .cta-button:active {
   transform: translateY(0);
-  box-shadow:
-    0 4px 16px rgba(0, 0, 0, 0.15),
-    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  box-shadow: 0 4px 16px hsla(217, 91%, 60%, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
 }
 
 /* Mobile Responsive */
