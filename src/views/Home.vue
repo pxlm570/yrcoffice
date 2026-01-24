@@ -563,14 +563,7 @@ onMounted(() => {
 }
 
 .button-primary::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s ease;
+  display: none;
 }
 
 .button-primary:hover {
@@ -578,10 +571,6 @@ onMounted(() => {
   transform: translateY(-2px);
   box-shadow: 0 8px 28px var(--color-blue-medium),
               0 0 0 1px hsla(217, 80%, 70%, 0.15) inset;
-}
-
-.button-primary:hover::before {
-  left: 100%;
 }
 
 .button-primary:active {
