@@ -244,11 +244,15 @@ ${formValue.value.message}`
 
         const mailtoLink = `mailto:contact@micono.eu.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
 
-        // Show success message
-        message.success('感谢您的留言！我们会尽快与您联系。')
+        // Show info message about redirecting to email
+        message.info('正在跳转到邮箱...', { duration: 2000 })
 
-        // Open mailto link
-        window.open(mailtoLink, '_blank')
+        // Open mailto link after a short delay
+        setTimeout(() => {
+          window.open(mailtoLink, '_blank')
+          // Show success message
+          message.success('感谢您的留言！我们会尽快与您联系。')
+        }, 500)
 
         // Reset form
         formValue.value = {
