@@ -1,6 +1,6 @@
 {
   "name": "yusaka-network-studio",
-  "version": "2.6",
+  "version": "2.7",
   "description": "御坂网络工作室官网",
   "type": "module",
   "scripts": {
