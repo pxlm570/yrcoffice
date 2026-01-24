@@ -555,26 +555,39 @@ onMounted(() => {
 }
 
 .button-primary {
-  background: var(--gradient-blue);
-  color: var(--color-text-primary);
-  border: 1px solid var(--color-blue-soft);
-  box-shadow: 0 4px 16px var(--color-blue-soft),
-              0 0 0 1px var(--color-blue-subtle) inset;
+  background: linear-gradient(135deg, #5B8CFF 0%, #2563EB 50%, #1E4FCC 100%);
+  color: #ffffff;
+  border: 1px solid rgba(91, 140, 255, 0.4);
+  box-shadow: 0 6px 20px hsla(217, 91%, 60%, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  position: relative;
+  overflow: hidden;
 }
 
 .button-primary::before {
-  display: none;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  transition: left 0.6s ease;
 }
 
 .button-primary:hover {
-  background: linear-gradient(135deg, var(--color-blue-light) 0%, var(--color-accent) 100%);
+  background: linear-gradient(135deg, #7AA7FF 0%, #3B82F6 50%, #2563EB 100%);
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px var(--color-blue-medium),
-              0 0 0 1px hsla(217, 80%, 70%, 0.15) inset;
+  box-shadow: 0 10px 30px hsla(217, 91%, 60%, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+  border-color: rgba(91, 140, 255, 0.6);
+}
+
+.button-primary:hover::before {
+  left: 100%;
 }
 
 .button-primary:active {
   transform: translateY(0);
+  box-shadow: 0 4px 16px hsla(217, 91%, 60%, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
 }
 
 .button-secondary {
@@ -1283,21 +1296,39 @@ onMounted(() => {
   align-items: center;
   gap: 0.6rem;
   padding: 0.85rem 2rem;
-  color: hsla(217, 80%, 70%, 0.95);
   font-weight: 600;
   text-decoration: none;
-  border: 1px solid var(--color-blue-soft);
+  border: 1px solid rgba(91, 140, 255, 0.35);
   border-radius: 10px;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  background: var(--color-blue-subtle);
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  background: linear-gradient(135deg, #4A7FE8 0%, #1E4FCC 100%);
+  color: #ffffff;
+  box-shadow: 0 3px 14px hsla(217, 91%, 60%, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+  position: relative;
+  overflow: hidden;
+}
+
+.case-cta-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
 }
 
 .case-cta-link:hover {
-  background: var(--gradient-blue);
-  color: var(--color-text-primary);
-  border-color: var(--color-blue-medium);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px var(--color-blue-soft);
+  background: linear-gradient(135deg, #6B9FFF 0%, #3B82F6 100%);
+  color: #ffffff;
+  border-color: rgba(91, 140, 255, 0.5);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px hsla(217, 91%, 60%, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+}
+
+.case-cta-link:hover::before {
+  left: 100%;
 }
 
 .case-cta-link:hover svg {
@@ -1307,7 +1338,7 @@ onMounted(() => {
 .case-cta-link svg {
   width: 18px;
   height: 18px;
-  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 /* Modal */
