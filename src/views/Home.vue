@@ -170,7 +170,8 @@
           </div>
         </div>
 
-        <div class="case-study-cta">
+        <!-- Case CTA button temporarily disabled -->
+        <!-- <div class="case-study-cta">
           <a href="mailto:contact@micono.eu.org" class="case-cta-link">
             查看完整技术案例
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -178,7 +179,7 @@
               <polyline points="12 5 19 12 12 19" />
             </svg>
           </a>
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -745,6 +746,13 @@ onMounted(() => {
 /* Services Section */
 .services {
   position: relative;
+  padding: 5rem 0;
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 3.5rem 0;
+  }
 }
 
 .section-header {
@@ -919,6 +927,17 @@ onMounted(() => {
 }
 
 /* Solutions Section */
+.solutions {
+  position: relative;
+  padding: 4.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .solutions {
+    padding: 3rem 0;
+  }
+}
+
 .solutions-list {
   display: flex;
   flex-direction: column;
@@ -1009,7 +1028,7 @@ onMounted(() => {
   text-align: center;
   max-width: 640px;
   margin: 0 auto;
-  padding: 4rem 3rem;
+  padding: 4.5rem 3.5rem;
   background: linear-gradient(135deg,
     var(--color-blue-soft) 0%,
     var(--color-blue-subtle) 100%);
@@ -1108,13 +1127,20 @@ onMounted(() => {
 /* Case Study Section */
 .case-study {
   position: relative;
+  padding: 5rem 0;
+}
+
+@media (max-width: 768px) {
+  .case-study {
+    padding: 3.5rem 0;
+  }
 }
 
 .case-study-content {
   display: grid;
   grid-template-columns: 0.4fr 0.6fr;
-  gap: 2.5rem;
-  margin-bottom: 2.5rem;
+  gap: 3rem;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 1024px) {
@@ -1127,7 +1153,7 @@ onMounted(() => {
 .case-data {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.25rem;
 }
 
 .case-intro {
@@ -1148,14 +1174,14 @@ onMounted(() => {
 .data-cards {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .data-card {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1.25rem;
+  padding: 1.5rem;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
   /* backdrop-filter: blur(10px); */
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -1212,7 +1238,7 @@ onMounted(() => {
 .tech-highlights {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .tech-card {
@@ -1220,9 +1246,59 @@ onMounted(() => {
   /* backdrop-filter: blur(10px); */
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 14px;
-  padding: 1.5rem;
+  padding: 1.75rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+  position: relative;
+}
+
+.tech-card::after {
+  content: '点击查看详情';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, var(--color-blue-medium) 0%, var(--color-blue-soft) 100%);
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  box-shadow: 0 4px 16px hsla(217, 91%, 60%, 0.3);
+  border: 1px solid rgba(91, 140, 255, 0.4);
+  z-index: 10;
+}
+
+.tech-card::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  border: 6px solid transparent;
+  border-top-color: var(--color-blue-medium);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.tech-card:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-12px);
+}
+
+.tech-card:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(8px);
 }
 
 .tech-card:hover {
@@ -1485,6 +1561,10 @@ onMounted(() => {
 
   .modal-title {
     font-size: 1.25rem;
+  }
+
+  .cta-content {
+    padding: 3rem 2rem;
   }
 }
 
