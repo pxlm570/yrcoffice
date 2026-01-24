@@ -114,16 +114,14 @@ const logoUrl = 'https://cdn.micono.eu.org/icon/logo.png'
 <style scoped>
 .about-page {
   min-height: calc(100vh - 128px);
-  /* background: linear-gradient(180deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%); */
-  background: var(--color-bg-primary);
+  background: linear-gradient(180deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%);
 }
 
 .page-hero {
-  /* background: linear-gradient(135deg,
+  background: linear-gradient(135deg,
     hsla(217, 91%, 60%, 0.18) 0%,
     hsla(217, 91%, 50%, 0.12) 50%,
-    hsla(217, 80%, 70%, 0.08) 100%); */
-  background: hsla(217, 91%, 60%, 0.18);
+    hsla(217, 80%, 70%, 0.08) 100%);
   background-size: 200% 200%;
   animation: gradientShift 30s ease infinite;
   padding: 100px 20px 80px;
@@ -179,11 +177,10 @@ const logoUrl = 'https://cdn.micono.eu.org/icon/logo.png'
   font-weight: 700;
   letter-spacing: -0.5px;
   animation: fadeInUp 0.8s ease-out;
-  /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text; */
-  color: rgba(255, 255, 255, 0.95);
+  background-clip: text;
 }
 
 @keyframes fadeInUp {
@@ -263,8 +260,8 @@ const logoUrl = 'https://cdn.micono.eu.org/icon/logo.png'
     0 0 0 1px hsla(217, 91%, 60%, 0.1) inset;
   transition: all var(--transition-slow);
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
+  /* -webkit-backdrop-filter: blur(10px); */
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 35px;
   object-fit: contain;
@@ -309,12 +306,11 @@ const logoUrl = 'https://cdn.micono.eu.org/icon/logo.png'
   border-radius: 16px;
   transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  /* background: linear-gradient(135deg,
+  background: linear-gradient(135deg,
     rgba(255, 255, 255, 0.08) 0%,
-    rgba(255, 255, 255, 0.02) 100%); */
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+    rgba(255, 255, 255, 0.02) 100%);
+  /* backdrop-filter: blur(20px); */
+  /* -webkit-backdrop-filter: blur(20px); */
   overflow: hidden;
   position: relative;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
@@ -380,9 +376,8 @@ const logoUrl = 'https://cdn.micono.eu.org/icon/logo.png'
 }
 
 .advantages-section {
-  /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.02) 100%); */
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(10px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.02) 100%);
+  /* backdrop-filter: blur(10px); */
   padding: 50px;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -396,8 +391,7 @@ const logoUrl = 'https://cdn.micono.eu.org/icon/logo.png'
   left: 0;
   right: 0;
   height: 1px;
-  /* background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent); */
-  background: rgba(255, 255, 255, 0.15);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
 }
 
 .advantages-section :deep(.n-list) {

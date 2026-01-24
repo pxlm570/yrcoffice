@@ -226,8 +226,7 @@ const currentTab = computed(() => tabs[activeTab.value])
 <style scoped>
 /* Page Hero */
 .services-page {
-  /* background: linear-gradient(180deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%); */
-  background: var(--color-bg-primary);
+  background: linear-gradient(180deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%);
 }
 
 .page-hero {
@@ -284,11 +283,10 @@ const currentTab = computed(() => tabs[activeTab.value])
 .hero-title {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   margin-bottom: 1rem;
-  /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text; */
-  color: rgba(255, 255, 255, 0.95);
+  background-clip: text;
   font-weight: 700;
 }
 
@@ -310,12 +308,11 @@ const currentTab = computed(() => tabs[activeTab.value])
   gap: 0.5rem;
   margin-bottom: 3rem;
   padding: 0.5rem;
-  /* background: linear-gradient(135deg,
+  background: linear-gradient(135deg,
     rgba(255, 255, 255, 0.05) 0%,
-    rgba(255, 255, 255, 0.02) 100%); */
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+    rgba(255, 255, 255, 0.02) 100%);
+  /* backdrop-filter: blur(20px); */
+  /* -webkit-backdrop-filter: blur(20px); */
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
 }
@@ -348,10 +345,9 @@ const currentTab = computed(() => tabs[activeTab.value])
 
 .tab-item.is-active {
   color: rgba(255, 255, 255, 0.95);
-  /* background: linear-gradient(135deg,
+  background: linear-gradient(135deg,
     var(--color-blue-medium) 0%,
-    var(--color-blue-subtle) 100%); */
-  background: var(--color-blue-medium);
+    var(--color-blue-subtle) 100%);
   border: 1px solid var(--color-blue-medium);
   box-shadow:
     0 4px 16px var(--color-blue-soft),
@@ -370,9 +366,8 @@ const currentTab = computed(() => tabs[activeTab.value])
   max-width: 640px;
   margin: 0 auto;
   padding: 2.5rem 2rem;
-  /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%); */
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(10px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+  /* backdrop-filter: blur(10px); */
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   position: relative;
@@ -386,8 +381,7 @@ const currentTab = computed(() => tabs[activeTab.value])
   transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  /* background: linear-gradient(90deg, transparent, var(--color-accent), transparent); */
-  background: var(--color-accent);
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
   border-radius: 2px;
 }
 
@@ -398,8 +392,7 @@ const currentTab = computed(() => tabs[activeTab.value])
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background: linear-gradient(135deg, var(--color-blue-soft) 0%, var(--color-blue-subtle) 100%); */
-  background: var(--color-blue-soft);
+  background: linear-gradient(135deg, var(--color-blue-soft) 0%, var(--color-blue-subtle) 100%);
   border: 1px solid var(--color-blue-soft);
   border-radius: 14px;
   color: var(--color-accent);
@@ -437,12 +430,11 @@ const currentTab = computed(() => tabs[activeTab.value])
 }
 
 .service-item-card {
-  /* background: linear-gradient(135deg,
+  background: linear-gradient(135deg,
     rgba(255, 255, 255, 0.08) 0%,
-    rgba(255, 255, 255, 0.02) 100%); */
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+    rgba(255, 255, 255, 0.02) 100%);
+  /* backdrop-filter: blur(20px); */
+  /* -webkit-backdrop-filter: blur(20px); */
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 14px;
   padding: 1.75rem;
@@ -459,11 +451,10 @@ const currentTab = computed(() => tabs[activeTab.value])
   left: 0;
   right: 0;
   height: 2px;
-  /* background: linear-gradient(90deg,
+  background: linear-gradient(90deg,
     transparent,
     var(--color-blue-medium),
-    transparent); */
-  background: var(--color-blue-medium);
+    transparent);
   opacity: 0;
   transition: opacity 0.4s ease;
 }
@@ -528,9 +519,8 @@ const currentTab = computed(() => tabs[activeTab.value])
   max-width: 600px;
   margin: 0 auto;
   padding: 4rem 3rem;
-  /* background: linear-gradient(135deg, var(--color-blue-soft) 0%, var(--color-blue-subtle) 100%); */
-  background: var(--color-blue-soft);
-  backdrop-filter: blur(10px);
+  background: linear-gradient(135deg, var(--color-blue-soft) 0%, var(--color-blue-subtle) 100%);
+  /* backdrop-filter: blur(10px); */
   border: 1px solid var(--color-blue-soft);
   border-radius: 16px;
   position: relative;
@@ -544,8 +534,7 @@ const currentTab = computed(() => tabs[activeTab.value])
   left: 0;
   right: 0;
   height: 1px;
-  /* background: linear-gradient(90deg, transparent, var(--color-blue-medium), transparent); */
-  background: var(--color-blue-medium);
+  background: linear-gradient(90deg, transparent, var(--color-blue-medium), transparent);
 }
 
 .cta-content::after {
@@ -584,8 +573,7 @@ const currentTab = computed(() => tabs[activeTab.value])
   padding: 1rem 2.5rem;
   font-size: 1rem;
   font-weight: 600;
-  /* background: linear-gradient(135deg, #5B8CFF 0%, #2563EB 50%, #1E4FCC 100%); */
-  background: #2563EB;
+  background: linear-gradient(135deg, #5B8CFF 0%, #2563EB 50%, #1E4FCC 100%);
   color: #ffffff;
   border: 1px solid rgba(91, 140, 255, 0.4);
   border-radius: 10px;
@@ -604,15 +592,13 @@ const currentTab = computed(() => tabs[activeTab.value])
   left: -100%;
   width: 100%;
   height: 100%;
-  /* background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent); */
-  background: rgba(255, 255, 255, 0.25);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
   transition: left 0.6s ease;
   z-index: -1;
 }
 
 .cta-button:hover {
-  /* background: linear-gradient(135deg, #7AA7FF 0%, #3B82F6 50%, #2563EB 100%); */
-  background: #3B82F6;
+  background: linear-gradient(135deg, #7AA7FF 0%, #3B82F6 50%, #2563EB 100%);
   transform: translateY(-2px);
   box-shadow: 0 8px 28px hsla(217, 91%, 60%, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
   border-color: rgba(91, 140, 255, 0.6);

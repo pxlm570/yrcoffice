@@ -85,12 +85,11 @@ onUnmounted(() => {
   gap: 1rem;
 
   /* Enhanced Glassmorphism Effect */
-  /* background: linear-gradient(135deg,
+  background: linear-gradient(135deg,
     rgba(255, 255, 255, 0.12) 0%,
-    rgba(255, 255, 255, 0.04) 100%); */
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+    rgba(255, 255, 255, 0.04) 100%);
+  /* backdrop-filter: blur(24px); */
+  /* -webkit-backdrop-filter: blur(24px); */
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 1.5rem;
   box-shadow:
@@ -113,11 +112,10 @@ onUnmounted(() => {
   left: 20%;
   right: 20%;
   height: 1px;
-  /* background: linear-gradient(90deg,
+  background: linear-gradient(90deg,
     transparent,
     rgba(255, 255, 255, 0.3),
-    transparent); */
-  background: rgba(255, 255, 255, 0.3);
+    transparent);
 }
 
 @keyframes floatIn {
@@ -210,8 +208,7 @@ onUnmounted(() => {
   left: 50%;
   width: 0;
   height: 2px;
-  /* background: linear-gradient(90deg, var(--color-blue-primary), var(--color-blue-light)); */
-  background: var(--color-blue-primary);
+  background: linear-gradient(90deg, var(--color-blue-primary), var(--color-blue-light));
   transform: translateX(-50%);
   transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   border-radius: 2px;
@@ -244,8 +241,7 @@ onUnmounted(() => {
   font-size: 0.875rem;
   font-weight: 600;
   color: #ffffff;
-  /* background: linear-gradient(135deg, #5B8CFF 0%, #2563EB 50%, #1E4FCC 100%); */
-  background: #2563EB;
+  background: linear-gradient(135deg, #5B8CFF 0%, #2563EB 50%, #1E4FCC 100%);
   border: 1px solid rgba(91, 140, 255, 0.4);
   border-radius: 0.75rem;
   text-decoration: none;
@@ -264,14 +260,12 @@ onUnmounted(() => {
   left: -100%;
   width: 100%;
   height: 100%;
-  /* background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent); */
-  background: rgba(255, 255, 255, 0.25);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
   transition: left 0.5s ease;
 }
 
 .cta-button:hover {
-  /* background: linear-gradient(135deg, #7AA7FF 0%, #3B82F6 50%, #2563EB 100%); */
-  background: #3B82F6;
+  background: linear-gradient(135deg, #7AA7FF 0%, #3B82F6 50%, #2563EB 100%);
   transform: translateY(-2px);
   box-shadow: 0 8px 24px hsla(217, 91%, 60%, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
   border-color: rgba(91, 140, 255, 0.6);

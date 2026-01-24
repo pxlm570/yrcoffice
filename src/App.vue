@@ -118,10 +118,10 @@ const themeOverrides = {
   --color-blue-strong: hsla(217, 91%, 60%, 0.40);
 
   /* Gradients */
-  /* --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.04) 100%); */
-  /* --gradient-accent: linear-gradient(135deg, #5B8CFF 0%, #2563EB 50%, #1E4FCC 100%); */
-  /* --gradient-white: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(200,200,220,0.85) 100%); */
-  /* --gradient-blue: linear-gradient(135deg, #5B8CFF 0%, #2563EB 50%, #1E4FCC 100%); */
+  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.04) 100%);
+  --gradient-accent: linear-gradient(135deg, #5B8CFF 0%, #2563EB 50%, #1E4FCC 100%);
+  --gradient-white: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(200,200,220,0.85) 100%);
+  --gradient-blue: linear-gradient(135deg, #5B8CFF 0%, #2563EB 50%, #1E4FCC 100%);
 
   /* Shadows */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
