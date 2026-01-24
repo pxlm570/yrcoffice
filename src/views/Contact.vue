@@ -599,8 +599,9 @@ const getServiceLabel = (value) => {
   color: #ffffff !important;
   box-shadow: 0 6px 20px hsla(217, 91%, 60%, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
   transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   height: 50px;
   position: relative;
   overflow: hidden;
@@ -621,6 +622,7 @@ const getServiceLabel = (value) => {
 .contact-form-card :deep(.n-button__content) {
   position: relative;
   z-index: 1;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15), 0 0 1px rgba(255, 255, 255, 0.3);
 }
 
 .contact-form-card :deep(.n-button--primary:hover) {
@@ -629,6 +631,10 @@ const getServiceLabel = (value) => {
   box-shadow: 0 10px 30px hsla(217, 91%, 60%, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
   border-color: rgba(91, 140, 255, 0.6);
   color: #ffffff !important;
+}
+
+.contact-form-card :deep(.n-button--primary:hover .n-button__content) {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 2px rgba(255, 255, 255, 0.5);
 }
 
 .contact-form-card :deep(.n-button--primary:hover::before) {
