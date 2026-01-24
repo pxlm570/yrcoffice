@@ -502,10 +502,11 @@ onMounted(() => {
 
 .title-line {
   display: block;
-  color: var(--color-text-primary);
+  color: rgba(255, 255, 255, 0.9);
   animation: fadeInUp 0.8s ease-out;
   margin: 0;
   line-height: 1.1;
+  font-weight: 700;
 }
 
 .title-line:nth-child(2) {
@@ -513,10 +514,12 @@ onMounted(() => {
 }
 
 .title-accent {
-  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-blue-light) 100%);
+  background: linear-gradient(135deg, #7AA7FF 0%, #5B8CFF 25%, #3B82F6 50%, #2563EB 75%, #1E4FCC 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  text-shadow: 0 0 40px hsla(217, 91%, 60%, 0.3);
+  position: relative;
 }
 
 .hero-subtitle {
