@@ -766,10 +766,11 @@ onMounted(() => {
 .section-title {
   font-size: clamp(2rem, 4vw, 2.5rem);
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, #7AA7FF 50%, rgba(255, 255, 255, 0.85) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-weight: 700;
 }
 
 .section-subtitle {
@@ -915,7 +916,7 @@ onMounted(() => {
 .service-stat-item .stat-value {
   font-size: 2.5rem;
   font-weight: 700;
-  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-blue-light) 100%);
+  background: linear-gradient(135deg, #7AA7FF 0%, #5B8CFF 25%, #3B82F6 50%, #2563EB 75%, #1E4FCC 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -975,12 +976,12 @@ onMounted(() => {
 .solution-number {
   font-size: 3rem;
   font-weight: 700;
-  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-blue-light) 100%);
+  background: linear-gradient(135deg, #7AA7FF 0%, #5B8CFF 25%, #3B82F6 50%, #2563EB 75%, #1E4FCC 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  opacity: 0.3;
   line-height: 1;
+  filter: drop-shadow(0 0 20px hsla(217, 91%, 60%, 0.25));
 }
 
 @media (max-width: 640px) {
@@ -1220,7 +1221,7 @@ onMounted(() => {
 .data-value {
   font-size: 1.75rem;
   font-weight: 700;
-  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-blue-light) 100%);
+  background: linear-gradient(135deg, #7AA7FF 0%, #5B8CFF 25%, #3B82F6 50%, #2563EB 75%, #1E4FCC 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
