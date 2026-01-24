@@ -196,12 +196,10 @@ const rules = {
     trigger: 'blur'
   },
   phone: {
-    required: true,
-    message: '请输入您的联系电话',
     trigger: 'blur',
     validator: (rule, value) => {
       if (!value) {
-        return new Error('请输入联系电话')
+        return new Error('请输入您的联系电话')
       }
       if (!/^1[3-9]\d{9}$/.test(value)) {
         return new Error('请输入正确的手机号码')
