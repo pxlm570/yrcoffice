@@ -66,7 +66,7 @@
               <h3>关注我们</h3>
               <div class="social-buttons">
                 <!-- WeChat -->
-                <a href="javascript:void(0)" class="social-button" title="微信: YusakaNetwork">
+                <a href="weixin://" class="social-button" title="微信: YusakaNetwork">
                   <img src="/wechat.svg" alt="微信" width="24" height="24">
                 </a>
                 <!-- GitHub -->
