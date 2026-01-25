@@ -57,7 +57,7 @@
               </div>
               <div class="contact-details">
                 <h3>微信号</h3>
-                <p>YusakaNetwork</p>
+                <p>MisakaNetwork</p>
               </div>
             </div>
 
